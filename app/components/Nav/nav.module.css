@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.title, .link {
+    padding: 5px;
+}
+
+.title:hover, .link:hover {
+    padding: 5px;
+    color: green;
+}
