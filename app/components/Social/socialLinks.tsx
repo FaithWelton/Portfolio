@@ -1,4 +1,4 @@
-import { config } from "@/config";
+import { config, socialLinks } from "@/config";
 import Link from "next/link";
 import styles from "./social.module.css";
 import {
@@ -9,9 +9,9 @@ import { TbMailFilled } from "react-icons/tb";
 
 const SocialLinks = () => {
     const socialItems = {
-        github: { path: "https://github.com/FaithWelton", icon: <FaGithub /> },
-        linkedin: { path: "linkedin.com/in/faithwelton", icon: <FaLinkedinIn /> },
-        email: { path: "mailto:faithmadore@hotmail.com", icon: <TbMailFilled /> },
+        github: { path: socialLinks.github, icon: <FaGithub /> },
+        linkedin: { path: socialLinks.linkedin, icon: <FaLinkedinIn /> },
+        email: { path: socialLinks.email, icon: <TbMailFilled /> },
     };
 
     return <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }}>

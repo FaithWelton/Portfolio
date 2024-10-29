@@ -1,0 +1,9 @@
+.link {
+    padding: 5px;
+    color: cornflowerblue;
+}
+
+.link:hover {
+    padding: 5px;
+    color: green;
+}
