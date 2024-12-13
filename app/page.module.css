@@ -1,0 +1,18 @@
+.spacedText {
+    font-size: 12px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.NOTABOX {
+    min-width: 200px;
+    min-height: 200px;
+    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
+    clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
+    border: 2px solid #00fffc;
+    background: #00fffc;
+    opacity: 40%;
+    -webkit-box-shadow: inset 0px 0px 58px 16px #FFFFFF;
+    -moz-box-shadow: inset 0px 0px 58px 16px #FFFFFF;
+    box-shadow: inset 0px 0px 58px 16px #FFFFFF;
+}

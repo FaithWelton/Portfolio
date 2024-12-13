@@ -1,0 +1,231 @@
+.animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+@keyframes animationCircle {
+    0% {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(1.4, 1.4, 1);
+        opacity: 0;
+    }
+}
+
+@keyframes animationCircleElement01 {
+    0% {
+        transform: scale3d(0, 0, 1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+}
+
+.animation .lineWrapper {
+    position: absolute;
+    opacity: 0;
+}
+
+.animation .line {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00fffc;
+}
+
+/*===========
+line01
+===========*/
+
+.animation .lineWrapper01 {
+    top: -95%;
+    left: 45%;
+    width: 10%;
+    height: 60%;
+    animation: animationLineWrapper01 3s ease-in 3s forwards infinite;
+}
+
+.animation .line01 {
+    animation: animationLine01 3s ease-in 3s forwards infinite;
+}
+
+/*===========
+line02
+===========*/
+
+.animation .rotate60 {
+    display: block;
+    position: absolute;
+    top: 22.5%;
+    left: 33%;
+    width: 100%;
+    height: 100%;
+    transform: rotate(60deg);
+}
+
+.animation .lineWrapper02 {
+    top: -78%;
+    left: 10%;
+    width: 10%;
+    height: 60%;
+    animation: animationLineWrapper01 3s ease-in 3s forwards infinite;
+}
+
+.animation .line02 {
+    animation: animationLine01 3s ease-in 3s forwards infinite;
+}
+
+/*===========
+line03
+===========*/
+
+.animation .rotate120 {
+    display: block;
+    position: absolute;
+    top: 36.5%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    transform: rotate(120deg);
+}
+
+.animation .lineWrapper03 {
+    top: -78%;
+    left: 10%;
+    width: 10%;
+    height: 60%;
+    animation: animationLineWrapper01 3s ease-in 3s forwards infinite;
+}
+
+.animation .line03 {
+    animation: animationLine01 3s ease-in 3s forwards infinite;
+}
+
+/*===========
+line04
+===========*/
+
+.animation .lineWrapper04 {
+    top: 140%;
+    left: 45%;
+    width: 10%;
+    height: 60%;
+    animation: animationLineWrapper02 3s ease-in 3s forwards infinite;
+}
+
+.animation .line04 {
+    animation: animationLine02 3s ease-in 3s forwards infinite;
+}
+
+/*===========
+line05
+===========*/
+
+.animation .rotate120 {
+    display: block;
+    position: absolute;
+    top: -15.5%;
+    left: -34%;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-120deg);
+}
+
+.animation .lineWrapper05 {
+    top: -78%;
+    left: 10%;
+    width: 10%;
+    height: 60%;
+    animation: animationLineWrapper01 3s ease-in 3s forwards infinite;
+}
+
+.animation .line05 {
+    animation: animationLine01 3s ease-in 3s forwards infinite;
+}
+
+/*===========
+line06
+===========*/
+
+.animation .rotate60 {
+    display: block;
+    position: absolute;
+    top: -34.5%;
+    left: -3%;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-60deg);
+}
+
+.animation .lineWrapper06 {
+    top: -78%;
+    left: 10%;
+    width: 10%;
+    height: 60%;
+    animation: animationLineWrapper01 3s ease-in 3s forwards infinite;
+}
+
+.animation .line06 {
+    animation: animationLine01 3s ease-in 3s forwards infinite;
+}
+
+@keyframes animationLineWrapper01 {
+    0% {
+        transform-origin: top;
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+    100% {
+        transform-origin: top;
+        transform: scale3d(1, 0, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes animationLine01 {
+    0% {
+        transform-origin: bottom;
+        transform: scale3d(1, 0, 1);
+        opacity: 1;
+    }
+    100% {
+        transform-origin: bottom;
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes animationLineWrapper02 {
+    0% {
+        transform-origin: bottom;
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+    100% {
+        transform-origin: bottom;
+        transform: scale3d(1, 0, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes animationLine02 {
+    0% {
+        transform-origin: top;
+        transform: scale3d(1, 0, 1);
+        opacity: 1;
+    }
+    100% {
+        transform-origin: top;
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+}

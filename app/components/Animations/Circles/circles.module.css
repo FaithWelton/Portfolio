@@ -1,0 +1,81 @@
+.animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.animation .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    background-color: transparent;
+    z-index: 9998;
+}
+
+.animation .circleElement01 {
+    width: 13vw;
+    height: 13vw;
+    border: 0.25vw solid #00fffc;
+    border-radius: 50%;
+    animation: animationCircle 3s ease-in-out 3s forwards infinite, animationCircleElement01 3s linear 3s forwards infinite;
+    opacity: 0;
+}
+
+.animation .circleElement02 {
+    width: 9vw;
+    height: 9vw;
+    border: 0.5vw solid #017e7c;
+    border-radius: 50%;
+    animation: animationCircle 3s ease-in-out 3s forwards infinite, animationCircleElement02 3s linear 3s forwards infinite;
+    opacity: 0;
+}
+
+.animation .circleElement03 {
+    width: 4vw;
+    height: 4vw;
+    border: 1vw solid #00413f;
+    border-radius: 50%;
+    animation: animationCircle 3s ease-in-out 3s forwards infinite, animationCircleElement03 3s linear 3s forwards infinite;
+    opacity: 0;
+}
+
+@keyframes animationCircle {
+    0% {
+        transform: scale3d(0, 0, 1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes animationCircleElement01 {
+    0% {
+        border: 0.25vw solid #00fffc;
+    }
+    100% {
+        border: 0 solid #00fffc;
+    }
+}
+
+@keyframes animationCircleElement02 {
+    0% {
+        border: 0.5vw solid #017e7c;
+    }
+    100% {
+        border: 0 solid #017e7c;
+    }
+}
+
+@keyframes animationCircleElement03 {
+    0% {
+        border: 1vw solid #00413f;
+    }
+    100% {
+        border: 0 solid #00413f;
+    }
+}

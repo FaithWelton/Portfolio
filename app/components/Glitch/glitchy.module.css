@@ -1,0 +1,129 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    filter: drop-shadow(0 1px 3px);
+}
+  
+.layers {
+    position: relative;
+}
+  
+.layers::before,
+.layers::after {
+    content: attr(data-text);
+    position: absolute;
+    width: 110%;
+    z-index: -1;
+}
+  
+.layers::before {
+    top: 10px;
+    left: 15px;
+    color: #e0287d;
+}
+  
+.layers::after {
+    top: 5px;
+    left: -10px;
+    color: #00fffc;
+}
+  
+.single-path {
+    clip-path: polygon(10% 40%, 32% 44%, 93% 42%, 6% 44%);
+}
+  
+.paths {
+    animation: paths 5s step-end infinite;
+}
+  
+@keyframes paths {
+    0% {
+        clip-path: polygon(100% 5%, 0 13%, 100% 12%);
+    }
+    5% {
+        clip-path: polygon(0 30%, 100% 37%, 100% 36%, 0 38%);
+    }
+    30% {
+        clip-path: polygon(100% 30%, 17% 40%, 100% 43%, 4% 43%, 0% 38%);
+    }
+    45% {
+        clip-path: polygon(100% 35%, 56% 53%, 100% 41%, 2% 61%, 65% 37%, 0 48%);
+    }
+    76% {
+        clip-path: polygon(87% 81%, 0 67%, 100% 89%);
+    }
+    90% {
+        clip-path: polygon(82% 88%, 0 91%, 0 79%, 100% 85%, 40% 97%, 100% 91%, 0 94%);
+    }
+    1%,
+    7%,
+    33%,
+    47%,
+    78%,
+    93% { clip-path: none; }
+}
+  
+.movement {
+    position: relative;
+    animation: movement 8s step-end infinite;
+}
+  
+@keyframes movement {
+    0% { top: 0px; left: -20px; }
+    15% { top: 10px; left: 10px; }
+    60% { top: 5px; left: -10px; }
+    75% { top: -5px; left: 20px; }
+    100% { top: 10px; left: 5px; }
+}
+  
+.opacity {
+    animation: opacity 5s step-end infinite;
+}
+  
+@keyframes opacity {
+    0% { opacity: 0.1; }
+    5% { opacity: 0.7; }
+    30% { opacity: 0.4; }
+    45% { opacity: 0.6; }
+    76% { opacity: 0.4; }
+    90% { opacity: 0.8; }
+    1%,
+    7%,
+    33%,
+    47%,
+    78%,
+    93% { opacity: 0; }
+}
+  
+.font {
+    animation: font 7s step-end infinite;
+}
+  
+@keyframes font {
+    0% { font-weight: 100; color: #e0287d; filter: blur(3px); }
+    20% { font-weight: 500; color: #fff; filter: blur(0); }
+    50% { font-weight: 300; color: #00fffc; filter: blur(2px); }
+    60% { font-weight: 700; color: #fff; filter: blur(0); }
+    90% { font-weight: 500; color: #e0287d; filter: blur(6px); }
+}
+  
+.glitchy {
+    animation: paths 5s step-end infinite;
+}
+  
+.glitchy::before {
+    animation:
+        paths 5s step-end infinite, 
+        opacity 5s step-end infinite,
+        font 8s step-end infinite,
+        movement 10s step-end infinite;
+}
+  
+.glitchy::after {
+    animation:
+        paths 5s step-end infinite,
+        opacity 5s step-end infinite,
+        font 7s step-end infinite,
+        movement 8s step-end infinite;
+}

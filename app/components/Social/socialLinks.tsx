@@ -1,23 +1,21 @@
-import { config, socialLinks } from "@/config";
 import Link from "next/link";
-import styles from "./social.module.css";
-import {
-    FaGithub,
-    FaLinkedinIn,
-} from "react-icons/fa6";
-import { TbMailFilled } from "react-icons/tb";
+import { socialLinks } from "@/app/util/config";
+import styles from "@/app/components/Social/social.module.css";
+import { capitalize } from "@/app/util/capitalize";
+import IconMap from "@/app/util/getIcon";
+import GlitchyText from "../Glitch/GlitchyText";
 
 const SocialLinks = () => {
-    const socialItems = {
-        github: { path: socialLinks.github, icon: <FaGithub /> },
-        linkedin: { path: socialLinks.linkedin, icon: <FaLinkedinIn /> },
-        email: { path: socialLinks.email, icon: <TbMailFilled /> },
-    };
-
-    return <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }}>
-        { Object.entries(socialItems).map(([name, { path, icon }]) =>
-            <Link key={ path } href={ path } className={ styles.link }> { icon } </Link>
-        )}
+    return <div className={ styles.container }>
+        { socialLinks.map(({ name, path }, index) => (
+            <Link key={ index } href={ path } className={ `${ styles.link } ${ styles.tooltip }` } aria-labelledby="tooltiptext">
+                <span className={ styles.tooltiptext } id="tooltiptext"> { capitalize(name) } </span>
+                
+                <GlitchyText>
+                    <IconMap icon={ name } size={ 20 } color="#FFFFFF" />
+                </GlitchyText>
+            </Link>
+        ))}
     </div>
 };
 

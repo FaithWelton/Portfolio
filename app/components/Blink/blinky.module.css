@@ -1,0 +1,9 @@
+.blink {
+    padding: 0;
+    margin: 0;
+    animation: blinker 1s step-start infinite;
+}
+  
+@keyframes blinker {
+    50% { opacity: 0; }
+}
