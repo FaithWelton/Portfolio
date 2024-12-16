@@ -38,6 +38,7 @@ body {
     conic-gradient(from 180deg at var(--t) var(--g),var(--c))
      0 calc((var(--s)/var(--n) - var(--g) + var(--t))/2)/
      var(--s) calc(var(--s)/var(--n));
+
 }
 
 * {

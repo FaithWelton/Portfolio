@@ -1,5 +1,5 @@
 import styles from "./glitchy.module.css";
-import pageStyles from "../../page.module.css";
+import pageStyles from "@/app/page.module.css";
 import { CSSProperties } from "react";
 
 interface Props {

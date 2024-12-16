@@ -16,3 +16,34 @@
     -moz-box-shadow: inset 0px 0px 58px 16px #FFFFFF;
     box-shadow: inset 0px 0px 58px 16px #FFFFFF;
 }
+
+.openScreen {
+    -webkit-animation: openScreen .5s ease-in both;
+    animation: openScreen .5s ease-in both;
+}
+
+@-webkit-keyframes openScreen {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 1
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity:1
+    }
+}
+
+@keyframes openScreen {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}

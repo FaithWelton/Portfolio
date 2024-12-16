@@ -1,39 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import BlinkyText from "./components/Blink/BlinkyText";
+import { useState } from "react";
+import BlinkyText from "./components/Animations/Blink/BlinkyText";
 import View from "./components/View/View";
-import styles from "./page.module.css";
 import Menu from "./components/Menu/Menu";
 import Projects from "./components/Projects/Projects";
 import About from "./components/About/About";
+import Typing from "./components/Animations/Typing/Typing";
 
 export default function Home() {
-  const [selection, setSelection] = useState<any>("home");
+  const [selection, setSelection] = useState<any>("HOME");
 
-  useEffect(() => {
-    let i = 0;
-    let txt = "welcome";
-    let speed = 150; /* Speed / Duration of the effect in milliseconds */
-
-    function typeWriter() {
-      if (i < txt.length) {
-        let textBox = document.getElementById("welcome-text");
-        if (!textBox) return;
-
-        textBox.innerHTML += txt.charAt(i);
-        i++;
-
-        setTimeout(typeWriter, speed);
-      }
-    };
-
-    typeWriter();
-  }, []);
-  
   return <View>
     <div style={{ display: "flex", justifyContent: "center", width: "100%", height: "5%" }}>    
-      <span className={ styles.spacedText } id="welcome-text" style={{ wordSpacing: -20 }} />
+      <Typing text={["welcome to my portfolio"]} elementId={ "welcome" } />
       <BlinkyText> { "_" } </BlinkyText>
     </div>
 

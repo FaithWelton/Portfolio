@@ -2,6 +2,8 @@
     display: inline-block;
     position: relative; 
     vertical-align: middle;
+    transition: all var(--radial-speed) ease-in;
+    transition-delay: var(--hover-delay);
 }
 
 .radialPivot {
@@ -54,6 +56,13 @@ label.radialPivot {
 .radial:hover .radialList {
     visibility: visible;
     opacity: 1;
+    transition-delay: 0s;
+}
+
+.radial:not(:hover) .radialList {
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 5s;
 }
 
 .access {
@@ -115,7 +124,7 @@ label.radialPivot {
     line-height: calc( var(--icon-size) * var(--font-size) ) !important; 
     background-color: transparent; 
     color: black;
-    border-radius: none; 
+    border-radius: none;
 }
 
 .radial a {
