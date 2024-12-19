@@ -1,4 +1,28 @@
 .container {
+    border-bottom: 1px solid #00fffc;
+    height: 50%;
+    width: 40%;
+}
+
+.openScreen {
+    -webkit-animation: openScreen .5s ease-in both;
+    animation: openScreen .5s ease-in both;
+}
+
+@keyframes openScreen {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+/* .container {
     border: 1px solid #00fffc;
     height: 100%;
     width: 100%;
@@ -55,4 +79,4 @@
     top: 86%;
     clip-path: polygon(100% 100%, 100% 0, 85% 0, 0% 100%);
     box-shadow: inset 0px 0px 30px 5px #00a6a3;
-}
+} */

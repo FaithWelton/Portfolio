@@ -1,0 +1,23 @@
+.container {
+    height: 200px;
+    width: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #00fffc;
+    clip-path: polygon(0 50%, 15% 0, 100% 0, 100% 85%, 85% 100%, 15% 100%);
+}
+
+.containerInside {
+    height: 99%;
+    width: 99%;
+    border: 1px solid #00fffc;
+    background: #000000;
+    clip-path: inherit;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

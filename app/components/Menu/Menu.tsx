@@ -2,9 +2,9 @@ import { Dispatch, Fragment, SetStateAction, useEffect, useState } from "react";
 import AnimLines from "../Animations/Lines/Lines";
 import AnimCircles from "../Animations/Circles/Circles";
 import pageStyles from "../../page.module.css";
-import styles from "./menu.module.css";
 import Dots from "./Dots";
 import MenuItem from "./MenuItem";
+import styles from "./menu.module.css";
 
 interface Props {
     selection: any;
@@ -43,17 +43,17 @@ const Menu = ({ selection, setSelection }: Props) => {
         };
     };
 
-    return <div className={`${ styles.radial } ${ styles.size } ${ styles.delay } ${ styles.speed }`} id="compassMenu" title="menu">
-        <label className={`${ styles.radialPivot }`} htmlFor="compassMenu">
-            <span className={ `${ pageStyles.spacedText } ${ styles.access }` }>
+    return <div className={`${ styles.radMenu } ${ styles.size } ${ styles.delay } ${ styles.speed }`} title="menu">
+        <div className={`${ styles.radMiddle }`}>
+            <span className={ `${ pageStyles.spacedText } ${ styles.label }` }>
                 { !selection.includes("PROJECTS_") && selection }
             </span>
-            
+
             <AnimCircles />
             <AnimLines />
-        </label>
+        </div>
 
-        <ul className={`${ styles.radialList } ${ styles.compass } ${ styles.radius }`} aria-label="main menu items">
+        <ul className={`${ styles.radList } ${ styles.position } ${ styles.radius }`} aria-label="main menu items">
             { displayItems.map((item, index) =>
                 <Fragment key={ index }>
                     <MenuItem label={ item.label } onClick={ item.onclick } />

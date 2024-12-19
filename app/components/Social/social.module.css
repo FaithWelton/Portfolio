@@ -5,16 +5,19 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    padding-bottom: 7px;
+    padding-right: 7px;
 }
 
 .link {
     padding: 5px;
     display: flex;
     flex-direction: column;
+    color: #00fffc;
 }
 
 .link:hover {
-    color: green;
+    color: #d4ff00;
 }
 
 .tooltip {
@@ -34,7 +37,7 @@
     visibility: hidden;
     width: 120px;
     background-color: black;
-    color: #fff;
+    color: #FFFFFF;
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;

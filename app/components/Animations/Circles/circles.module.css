@@ -3,6 +3,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 
 .animation .circle {
@@ -12,7 +13,7 @@
     transform: translate(-50%, -50%);
     transform-origin: center;
     background-color: transparent;
-    z-index: 9998;
+    pointer-events: none;
 }
 
 .animation .circleElement01 {
@@ -22,6 +23,7 @@
     border-radius: 50%;
     animation: animationCircle 3s ease-in-out 3s forwards infinite, animationCircleElement01 3s linear 3s forwards infinite;
     opacity: 0;
+    pointer-events: none;
 }
 
 .animation .circleElement02 {
@@ -31,6 +33,7 @@
     border-radius: 50%;
     animation: animationCircle 3s ease-in-out 3s forwards infinite, animationCircleElement02 3s linear 3s forwards infinite;
     opacity: 0;
+    pointer-events: none;
 }
 
 .animation .circleElement03 {
@@ -40,6 +43,7 @@
     border-radius: 50%;
     animation: animationCircle 3s ease-in-out 3s forwards infinite, animationCircleElement03 3s linear 3s forwards infinite;
     opacity: 0;
+    pointer-events: none;
 }
 
 @keyframes animationCircle {
@@ -58,7 +62,7 @@
         border: 0.25vw solid #00fffc;
     }
     100% {
-        border: 0 solid #00fffc;
+        border: 0 solid #d4ff00;
     }
 }
 

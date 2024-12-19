@@ -4,6 +4,8 @@ interface Props {
     selection: any;
 };
 
+// https://api.github.com/users/FaithWelton/repos
+
 const Projects = ({ selection }: Props) => {
     return <div className={ styles.wrapper }>
         <div className={ styles.decorSidebar } />

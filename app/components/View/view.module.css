@@ -8,4 +8,6 @@
     padding-bottom: 40px;
     min-height: 500px;
     position: relative;
+    border-top-left-radius: 50% 10%;
+    border-bottom-left-radius: 5% 10%;
 };

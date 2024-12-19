@@ -1,6 +1,6 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ededed;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,24 +12,20 @@
 
 html, body {
   height: 100%;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 100%;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #000000;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
-
-  --s: 100px;  /* size of grid */
-  --n: 5;      /* granularity */
-  --t: 1px;    /* thickness */
-  --g: 10px;   /* gap between dashes */
+  /* --s: 100px;  // size of grid
+  --n: 5;      // granularity
+  --t: 1px;    // thickness
+  --g: 10px;   // gap between dashes
   --c:#00fffb09 25%, transparent 0;
   background: 
     conic-gradient(at var(--g) var(--t),var(--c))
@@ -37,19 +33,13 @@ body {
      calc(var(--s)/var(--n)) var(--s),
     conic-gradient(from 180deg at var(--t) var(--g),var(--c))
      0 calc((var(--s)/var(--n) - var(--g) + var(--t))/2)/
-     var(--s) calc(var(--s)/var(--n));
-
+     var(--s) calc(var(--s)/var(--n)); */
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
