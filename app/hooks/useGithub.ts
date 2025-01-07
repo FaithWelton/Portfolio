@@ -18,16 +18,13 @@ export type UserRepo = {
     name: string;
     html_url: string;
     description: string;
-    // created_at: string;
-    // updated_at: string;
-    // languages: string;
-    // has_wiki: boolean;
-    // has_pages: boolean;
-    // license: any;
-};
-
-export type UserProject = {
-
+    created_at: string;
+    updated_at: string;
+    language: string;
+    languages_url: string;
+    has_wiki: boolean;
+    has_pages: boolean;
+    license: any;
 };
 
 const username = config.defaultUser.username;
@@ -46,10 +43,10 @@ export async function GetProfile(): Promise<UserProfile> {
     return profileData;
 };
 
-const GetLanguages = async (project: string): Promise<string> => {
+const GetLanguage = async (url: string): Promise<string> => {
     let response;
     try {
-        response = await fetch(`https://api.github.com/repos/FaithWelton/${ project }/languages`);
+        response = await fetch(url);
         if (!response.ok) throw new Error("Languages not found");
     } catch (error) {
         console.error(error);
@@ -62,7 +59,7 @@ const GetLanguages = async (project: string): Promise<string> => {
     return Object.keys(result).toString();
 };    
 
-export async function GetRepos(): Promise<UserRepo[] | []> {
+export async function GetRepos(): Promise<UserRepo[]> {
     let reposRes;
     try {
         reposRes = await fetch(`https://api.github.com/users/${ username }/repos`);
@@ -72,13 +69,11 @@ export async function GetRepos(): Promise<UserRepo[] | []> {
         return [];
     };
 
-    const reposData: UserRepo[] = await reposRes.json();
-    console.log("REPOS");
-    console.log(reposData);
-    return reposData;
+    const repoData: UserRepo[] = await reposRes.json();
+    return repoData;
 };
 
-export async function GetProject({ projectname }: { projectname: string; }): Promise<UserProject | null> {
+export async function GetProject(projectname: string): Promise<UserRepo | null> {
     let projectRes;
     try {
         projectRes = await fetch(`https://api.github.com/repos/${ username }/${ projectname }`);
@@ -88,8 +83,6 @@ export async function GetProject({ projectname }: { projectname: string; }): Pro
         return null;
     };
 
-    const projectData: UserRepo[] = await projectRes.json();
-    console.log("Project");
-    console.log(projectData);
+    const projectData: UserRepo = await projectRes.json();
     return projectData;
 };

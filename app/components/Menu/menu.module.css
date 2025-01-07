@@ -96,3 +96,7 @@
 .position > *:nth-of-type(14) { --top: -0.383 ; --left: -0.924 ; --delay: 13; }
 .position > *:nth-of-type(15) { --top: -0.707 ; --left: -0.707 ; --delay: 14; }
 .position > *:nth-of-type(16) { --top: -0.924 ; --left: -0.383 ; --delay: 15; }
+
+.menuItem {
+    cursor: pointer;
+}

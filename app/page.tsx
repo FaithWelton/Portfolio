@@ -26,7 +26,16 @@ export default function Home() {
 
       <SocialLinks />
 
-      <Warn />
+      {/* DECORATIONS: */}
+      <Warn /> 
+ 
+      <div id="TOP_RIGHT" className={ styles.decor1 }>
+        <div className={ styles.decor1Arrow1 } />
+        <div className={ styles.decor1Arrow2 } />
+        <div className={ styles.decor1Arrow3 } />
+      </div>
+
+      <div id="BOTTOM_RIGHT" className={ styles.decor2 }></div>
     </View>
   </div>
 };

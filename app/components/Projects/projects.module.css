@@ -1,7 +1,9 @@
 .listItem {
-    border: 1px solid #d4ff00;
-    padding: 5px;
+    border: 4px double #00fffc;
+    padding: 10px;
     color: #FFFFFF;
+    cursor: pointer;
+
 }
 
 .listItem:hover {

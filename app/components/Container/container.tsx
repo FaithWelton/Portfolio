@@ -6,10 +6,10 @@ const Container = ({ title, extra, children }: { title?: string; extra?: any; ch
         <div className={ `${ styles.container }` }>
             <div className={ `${ styles.containerInside }` }>
                 { title && <div className={ styles.title }>
-                    <Typing text={ title } elementId="container_title" style={{ letterSpacing: 5 }}/>
+                    <Typing text={ title } elementId="container_title" style={{ letterSpacing: 5, fontSize: 13 }}/>
                 </div> }
 
-                <div style={{ height: "55%", width: "35%", position: "absolute", bottom: 10, left: 10 }}>
+                <div style={{ height: "55%", width: "35%", position: "absolute", top: 115, left: 10 }}>
                     { extra }
                 </div>
 
