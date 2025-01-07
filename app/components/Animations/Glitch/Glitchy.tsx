@@ -8,10 +8,10 @@ interface Props {
     className?: string;
 }
 
-const GlitchyText = ({ children, style }: Props) => {
+const Glitchy = ({ children, style }: Props) => {
     return <div className={ `${ pageStyles.spacedText } ${ styles.content } ${ styles.layers } ${ styles.glitchy }` } style={{ ...style }} data-text={ children }>
         { children }
     </div>
 };
 
-export default GlitchyText;
+export default Glitchy;

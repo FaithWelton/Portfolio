@@ -1,10 +1,22 @@
 .spacedText {
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 10px;
     text-transform: uppercase;
 }
 
+.mainContainer {
+    height: 85%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 100px;
+}
+
 .openScreen {
+    height: 100%;
+    width: 100%;
     -webkit-animation: openScreen .5s ease-in both;
     animation: openScreen .5s ease-in both;
 }
@@ -21,6 +33,7 @@
         opacity: 1;
     }
 }
+
   
 /* BOTTOM_RIGHT */
 .decor3 {
@@ -99,4 +112,15 @@
 
 @keyframes blinker {
     50% { opacity: 0; }
+}
+
+.topDecor {
+    position: absolute;
+    left: 40%;
+    top: 1%;
+    z-index: -10;
+    width: 20%;
+    height: 4%;
+    border: 1px dashed #00fffc;
+    opacity: 60%;
 }

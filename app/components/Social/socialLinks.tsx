@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { socialLinks } from "@/app/util/config";
-import styles from "@/app/components/Social/social.module.css";
 import { capitalize } from "@/app/util/capitalize";
 import IconMap from "@/app/util/getIcon";
-import GlitchyText from "../Animations/Glitch/GlitchyText";
+import Glitchy from "../Animations/Glitch/Glitchy";
+import styles from "@/app/components/Social/social.module.css";
 
 const SocialLinks = () => {
     return <div className={ styles.container }>
@@ -11,9 +11,9 @@ const SocialLinks = () => {
             <Link key={ index } href={ path } className={ `${ styles.link } ${ styles.tooltip }` } aria-labelledby="tooltiptext">
                 <span className={ styles.tooltiptext } id="tooltiptext"> { capitalize(name) } </span>
                 
-                <GlitchyText>
+                <Glitchy>
                     <IconMap icon={ name } size={ 20 } color="#FFFFFF" />
-                </GlitchyText>
+                </Glitchy>
             </Link>
         ))}
     </div>

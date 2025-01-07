@@ -41,6 +41,7 @@ const GridBackground = () => {
 
             requestAnimationFrame(animateLines);
         };
+
         animateLines();
     }, []);
 

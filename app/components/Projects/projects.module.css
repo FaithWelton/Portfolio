@@ -1,82 +1,9 @@
-.container {
-    border-bottom: 1px solid #00fffc;
-    height: 50%;
-    width: 40%;
+.listItem {
+    border: 1px solid #d4ff00;
+    padding: 5px;
+    color: #FFFFFF;
 }
 
-.openScreen {
-    -webkit-animation: openScreen .5s ease-in both;
-    animation: openScreen .5s ease-in both;
+.listItem:hover {
+    color: #d4ff00;
 }
-
-@keyframes openScreen {
-    0% {
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-        opacity: 1;
-    }
-}
-
-/* .container {
-    border: 1px solid #00fffc;
-    height: 100%;
-    width: 100%;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%);
-    box-shadow: inset 0px 0px 30px 5px #00fffc;
-    padding: 25px;
-}
-
-.wrapper {
-    position: relative;
-    height: 50%;
-    width: 40%;
-}
-
-.decorBox {
-    position: absolute;
-    transform: rotate(45deg);
-    background: #00fffc;
-    border: 1px solid #00fffc;
-    height: 50px;
-    width: 50px;
-    left: -25px;
-    top: 40%;
-}
-
-.decorSidebar {
-    position: absolute;
-    border: 1px solid #00fffc;
-    height: 85%;
-    width: 10px;
-    right: -15px;
-    background: 
-        linear-gradient(to bottom, #00fffc 30%, transparent 30%) 0 0,
-        linear-gradient(to bottom, #00fffc 30%, transparent 30%) 0 15%;
-    background-size: 40px 10%;
-    
-    background-position: 0 0;
-    animation: sidebarAnim 5s infinite linear;
-}
-
-@keyframes sidebarAnim {
-    100% {
-        background-position: 0 100%;
-    }
-}
-
-.decorCorner {
-    position: absolute;
-    background: #00fffc;
-    border: 1px solid #00fffc;
-    height: 14%;
-    width: 80px;
-    right: -15px;
-    top: 86%;
-    clip-path: polygon(100% 100%, 100% 0, 85% 0, 0% 100%);
-    box-shadow: inset 0px 0px 30px 5px #00a6a3;
-} */

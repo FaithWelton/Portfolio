@@ -5,6 +5,7 @@ import pageStyles from "../../page.module.css";
 import Dots from "./Dots";
 import MenuItem from "./MenuItem";
 import styles from "./menu.module.css";
+import { GetProjectList } from "@/app/hooks/getProjects";
 
 interface Props {
     selection: any;
@@ -19,12 +20,12 @@ const Menu = ({ selection, setSelection }: Props) => {
         { label: "about", onclick: () => setSelection("ABOUT") },
     ];
 
-    const ProjectMenuItems = [
-        { label: "littlestTaskBot", onclick: () => setSelection("PROJECTS_littlestTaskBot") },
-        { label: "goTorrent", onclick: () => setSelection("PROJECTS_goTorrent") },
-        { label: "back", onclick: () => handleMenuDisplay("HOME") },
-        { label: "portfolio", onclick: () => setSelection("PROJECTS_portfolio") },
-    ];
+    // const ProjectMenuItems = [
+    //     { label: "littlestTaskBot", onclick: () => setSelection("PROJECTS_littlestTaskBot") },
+    //     { label: "goTorrent", onclick: () => setSelection("PROJECTS_goTorrent") },
+    //     { label: "back", onclick: () => handleMenuDisplay("HOME") },
+    //     { label: "portfolio", onclick: () => setSelection("PROJECTS_portfolio") },
+    // ];
 
     const [displayItems, setDisplayItems] = useState(MainMenuItems);
 
@@ -35,7 +36,6 @@ const Menu = ({ selection, setSelection }: Props) => {
                 setSelection("HOME");
                 break;
             case "PROJECTS":
-                setDisplayItems(ProjectMenuItems);
                 setSelection("PROJECTS");
                 break;
             default:
@@ -46,7 +46,7 @@ const Menu = ({ selection, setSelection }: Props) => {
     return <div className={`${ styles.radMenu } ${ styles.size } ${ styles.delay } ${ styles.speed }`} title="menu">
         <div className={`${ styles.radMiddle }`}>
             <span className={ `${ pageStyles.spacedText } ${ styles.label }` }>
-                { !selection.includes("PROJECTS_") && selection }
+                { selection }
             </span>
 
             <AnimCircles />
