@@ -1,6 +1,5 @@
 "use server";
 
-import { Dispatch, SetStateAction } from "react";
 import { config } from "../util/config";
 
 export type UserProfile = {

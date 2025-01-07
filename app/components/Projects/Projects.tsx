@@ -3,7 +3,7 @@ import styles from "./projects.module.css";
 import Container from "../Container/container";
 import Typing from "../Animations/Typing/Typing";
 import Link from "next/link";
-import { GetProject, GetRepos, UserRepo } from "@/app/hooks/useGithub";
+import { GetRepos, UserRepo } from "@/app/hooks/useGithub";
 
 const Projects = () => {
     const [repoData, setRepoData] = useState<UserRepo[]>([]);

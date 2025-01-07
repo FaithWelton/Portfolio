@@ -5,7 +5,6 @@ import Image from "next/image";
 import { GetProfile, UserProfile } from "@/app/hooks/useGithub";
 import { config } from "@/app/util/config";
 import pageStyles from "../../page.module.css";
-import Link from "next/link";
 
 const About = () => {
     const [user, setUser] = useState<UserProfile>(config.defaultUser);

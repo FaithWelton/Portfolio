@@ -1,11 +1,10 @@
-import { Dispatch, Fragment, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, Fragment, SetStateAction, useState } from "react";
 import AnimLines from "../Animations/Lines/Lines";
 import AnimCircles from "../Animations/Circles/Circles";
 import pageStyles from "../../page.module.css";
 import Dots from "./Dots";
 import MenuItem from "./MenuItem";
 import styles from "./menu.module.css";
-import { GetProjectList } from "@/app/hooks/getProjects";
 
 interface Props {
     selection: any;
