@@ -1,9 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    publicRuntimeConfig: {
-        modifiedDate: new Date().toISOString(),
-    },
     images: {
         remotePatterns: [
             {
