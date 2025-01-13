@@ -15,35 +15,43 @@ export type UserProfile = {
 export type UserRepo = {
     id: number;
     name: string;
+    private: boolean;
     html_url: string;
     description: string;
-    created_at: string;
-    updated_at: string;
     language: string;
     languages_url: string;
+    created_at: string;
+    updated_at: string;
+    pushed_at: string;
     has_wiki: boolean;
-    has_pages: boolean;
-    license: any;
+    archived: boolean;
+    license: string | null;
+    visibility: string;
 };
 
 const username = config.defaultUser.username;
 export async function GetProfile(): Promise<UserProfile> {
-    let profileRes;
+    let response: Response;
+
     try {
-        profileRes = await fetch(`https://api.github.com/users/${ username }`);
-        if (!profileRes.ok) throw new Error("User not found");
+        response = await fetch(`https://api.github.com/users/${ username }`);
+        if (!response.ok) throw new Error("User not found");
     } catch (error) {
         console.error(error);
         return config.defaultUser;
     };
 
-    const profileData: UserProfile = await profileRes.json();
-    profileData.bio = config.defaultUser.bio;
-    return profileData;
+    const result: UserProfile = await response.json();
+    if (!result) return config.defaultUser;
+
+    result.bio = config.defaultUser.bio;
+
+    return result;
 };
 
 const GetLanguage = async (url: string): Promise<string> => {
-    let response;
+    let response: Response;
+
     try {
         response = await fetch(url);
         if (!response.ok) throw new Error("Languages not found");
@@ -55,33 +63,46 @@ const GetLanguage = async (url: string): Promise<string> => {
     let result = await response.json();
     if (!result) return "";
 
-    return Object.keys(result).toString();
+    const languages: string = Object.keys(result).toString().replaceAll(",", ", ");
+    return languages;
 };    
 
-export async function GetRepos(): Promise<UserRepo[]> {
-    let reposRes;
+export async function GetRepos(): Promise<string[]> {
+    let response: Response;
+
     try {
-        reposRes = await fetch(`https://api.github.com/users/${ username }/repos`);
-        if (!reposRes.ok) throw new Error("Repos not found");
+        response = await fetch(`https://api.github.com/users/${ username }/repos`);
+        if (!response.ok) throw new Error("Repos not found");
     } catch (error) {
         console.error(error);
         return [];
     };
+    
+    const result: UserRepo[] = await response.json();
+    if (!result) return [];
 
-    const repoData: UserRepo[] = await reposRes.json();
-    return repoData;
+    let filteredArray: string[] = [];
+    const filteredData: UserRepo[] = result.filter((repo) => !repo.archived && !repo.private);
+    filteredData.map((data) => filteredArray.push(data.name));
+
+    return filteredArray;
 };
 
 export async function GetProject(projectname: string): Promise<UserRepo | null> {
-    let projectRes;
+    let response: Response;
     try {
-        projectRes = await fetch(`https://api.github.com/repos/${ username }/${ projectname }`);
-        if (!projectRes.ok) throw new Error("Project not found");
+        response = await fetch(`https://api.github.com/repos/${ username }/${ projectname }`);
+        if (!response.ok) throw new Error("Project not found");
     } catch (error) {
         console.error(error);
         return null;
     };
 
-    const projectData: UserRepo = await projectRes.json();
-    return projectData;
+    const result: UserRepo = await response.json();
+    if (!result) return null;
+
+    const langs: string = await GetLanguage(result.languages_url);
+    if (langs !== "") return { ...result, language: langs };
+
+    return result;
 };

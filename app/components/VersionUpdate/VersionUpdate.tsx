@@ -13,7 +13,7 @@ const VersionUpdate = () => {
       if (!repoInfo) return;
 
       let newDate = new Date(repoInfo.updated_at);
-      console.log(`Last Updated At: ${ newDate }`)
+      // console.log(`Last Updated At: ${ newDate }`)
       setDateModified(newDate);
     };
     GetData();
