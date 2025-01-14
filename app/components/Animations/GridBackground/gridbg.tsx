@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from 'react';
 import styles from "./gridbg.module.css";
 
@@ -8,7 +10,7 @@ function randomRange(min: number, max: number) {
 const GridBackground = () => {    
     const [animatedLines, setAnimatedLines] = useState<{ x: number; y: number; speed: number; height: number; }[]>([]);
     const [gridDots, setGridDots] = useState<{ x: number; y: number; }[]>([]);
-    const gridCellSize = 30;
+    const gridCellSize = 20;
 
     const createAnimatedLines = () => {
         const lines = [];
