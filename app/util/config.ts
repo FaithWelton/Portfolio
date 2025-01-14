@@ -27,7 +27,7 @@ export const config = {
 export const socialLinks: ListProps[] = [
     { name: "github", description: "", path: "https://github.com/FaithWelton" },
     { name: "linkedin", description: "", path: "https://www.linkedin.com/in/faithwelton/" },
-    { name: "email", description: "", path: "mailto:faithmadore@hotmail.com" },
+    { name: "email", description: "", path: "mailto:email@faithisa.dev" },
 ];
 
 export const projects: ListProps[] = [
