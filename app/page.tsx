@@ -12,7 +12,7 @@ import Warn from "./components/Animations/Warn/Warn";
 import GridBackground from "./components/Animations/GridBackground/gridbg";
 
 export default function Home() {
-  const [selection, setSelection] = useState<any>("HOME");
+  const [selection, setSelection] = useState<any>("home");
   const percents = ["05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95"];
   const messages = [
     "initializing system...",
@@ -55,8 +55,8 @@ export default function Home() {
     </div>
 
     <div className={ styles.sidebar }>
-      <div style={{ height: "100%", width: "2px" }}> <div className={ styles.line1 } style={{ background: "#00FFFC" }} /> </div>
-      <div style={{ height: "100%", width: "2px" }}> <div className={ styles.line2 } style={{ background: "#FFFFFF" }} /> </div>
+      <div style={{ height: "100%", width: "2px" }}> <div className={ styles.bouncingLine } style={{ background: "#ff00ae" }} /> </div>
+      <div style={{ height: "100%", width: "2px" }}> <div className={ styles.bouncingLine } style={{ background: "#f6ff00", animationDelay: "3s" }} /> </div>
       
       <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
         <div className={ styles.versionContainer }>
@@ -81,8 +81,12 @@ export default function Home() {
     <Menu selection={ selection } setSelection={ setSelection } />
 
     <View>
-      
+      { selection }
     </View>
+
+    <SocialLinks />
+    
+    <Warn />
   </div>
 
 // return <div className={ styles.openScreen }>
@@ -96,7 +100,7 @@ export default function Home() {
 //           { selection === "ABOUT" && <About /> }
 //       </div>
 
-//       <SocialLinks />
+//       
 
 //       {/* DECORATIONS: */}
 //       <Warn /> 

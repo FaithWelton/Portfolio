@@ -3,7 +3,7 @@ import { socialLinks } from "@/app/util/config";
 import { capitalize } from "@/app/util/capitalize";
 import IconMap from "@/app/util/getIcon";
 import Glitchy from "../Animations/Glitch/Glitchy";
-import styles from "@/app/components/Social/social.module.css";
+import styles from "./social.module.css";
 
 const SocialLinks = () => {
     return <div className={ styles.container }>

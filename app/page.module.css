@@ -11,19 +11,32 @@
     padding-right: 10px;
 }
 
+@keyframes openScreen {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
 .sidebar {
     position: relative;
     /* border: 1px solid #00FFFC; */
     border-left: 1px solid #00FFFC;
     border-top: 1px solid #00FFFC;
     border-bottom: 1px solid #00FFFC;
-    background: #00FFFB19;
+    background: #00fffb18;
     height: 95%;
     width: 10%;
     display: flex;
     flex-direction: row;
     clip-path: polygon(90% 0, 100% 10%, 100% 90%, 90% 100%, 0 100%, 0 0);
-    z-index: 1;
+    z-index: 2;
     left: 10px;
 }
 
@@ -52,20 +65,12 @@
 }
 
 /* Bouncing Lines */
-.line1 {
+.bouncingLine {
     width: 100%;
     height: 100%;
     background: #FFFFFF;
     transform: scaleY(0);
     animation: growShrink 2s ease-in-out infinite;
-}
-
-.line2 {
-    width: 100%;
-    height: 100%;
-    background: #FFFFFF;
-    transform: scaleY(0);
-    animation: growShrink 3s ease-in-out infinite;
 }
 
 @keyframes growShrink {
@@ -121,45 +126,6 @@
 
 
 
-
-
-
-
-.spacedText {
-    font-size: 10px;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-}
-
-.mainContainer {
-    height: 85%;
-    margin-left: 2%;
-    margin-right: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-right: 100px;
-}
-
-.openScreen {
-    height: 100%;
-    width: 100%;
-    -webkit-animation: openScreen .5s ease-in both;
-    animation: openScreen .5s ease-in both;
-}
-
-@keyframes openScreen {
-    0% {
-        -webkit-transform: scaleY(0);
-        transform: scaleY(0);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-        opacity: 1;
-    }
-}
 
 /* TOP_RIGHT */
 .decor1 {
