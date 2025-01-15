@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Glitchy = ({ children, style }: Props) => {
-    return <div className={ `${ pageStyles.spacedText } ${ styles.content } ${ styles.layers } ${ styles.glitchy }` } style={{ ...style }} data-text={ children }>
+    return <div style={{ ...style }} className={ `${ pageStyles.spacedText } ${ styles.content } ${ styles.layers } ${ styles.glitchy }` } data-text={ children }>
         { children }
     </div>
 };

@@ -21,7 +21,7 @@ export const config = {
             "I’m excited about the future of design and development and am always eager to learn, grow, and build innovative solutions.",
         ],
     },
-    warning: ["This website is under active construction!", "What you see here now will likely change in appearance."],
+    warning: ["This website is under active construction!"],
 };
 
 export const socialLinks: ListProps[] = [

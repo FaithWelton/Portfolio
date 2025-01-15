@@ -10,7 +10,7 @@ const VersionUpdate = () => {
 
   useEffect(() => {
     const GetData = async () => {
-      let repoInfo = await GetProject("Portfolio");
+      let repoInfo = await GetProject("portfolio");
       if (!repoInfo) return;
 
       let newDate = new Date(repoInfo.updated_at);
@@ -20,11 +20,13 @@ const VersionUpdate = () => {
     GetData();
   }, []);
     
-  return <Glitchy style={{ width: "100%", paddingTop: "5px", paddingBottom: "10px", paddingLeft: "5px", height: "6%", padding: "5px" }}>
-    <Typing text={ `Last Update: ${ format(dateModified, "EEEEE MMMMM dd yyyy") }` } elementId={ "last_update" } style={ style } />
-    <Typing text={ `${ format(new Date(), "EEEEE MMMMM dd yyyy") }` } elementId={ "today" } style={ style } />
-    <Typing text={ `V.1.0.` } elementId={ "version" } style={ style } />
-  </Glitchy>
+  return <div style={{ display: "flex", flexDirection: "column", width: "100%", paddingTop: "5px", paddingBottom: "10px", paddingLeft: "5px", height: "6%", padding: "5px" }}>
+    <Glitchy>
+      <Typing text={ `Last Update: ${ format(dateModified, "EEEEE MMMMM dd yyyy") }` } elementId={ "last_update" } style={ style } />
+      <Typing text={ `${ format(new Date(), "EEEEE MMMMM dd yyyy") }` } elementId={ "today" } style={ style } />
+      <Typing text={ `V.1.0.` } elementId={ "version" } style={ style } />
+    </Glitchy>
+  </div>
 };
 
 export default VersionUpdate;

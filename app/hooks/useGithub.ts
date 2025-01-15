@@ -50,6 +50,7 @@ export async function GetProfile(): Promise<UserProfile> {
 };
 
 const GetLanguage = async (url: string): Promise<string> => {
+    if (!url || url === "") return "";
     let response: Response;
 
     try {
@@ -89,6 +90,8 @@ export async function GetRepos(): Promise<string[]> {
 };
 
 export async function GetProject(projectname: string): Promise<UserRepo | null> {
+    if (!projectname || projectname === "") return null;
+
     let response: Response;
     try {
         response = await fetch(`https://api.github.com/repos/${ username }/${ projectname }`);

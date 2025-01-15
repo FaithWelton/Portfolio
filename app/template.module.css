@@ -1,0 +1,198 @@
+.home {
+    border: 1px solid #00FFFC;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-animation: openScreen .5s ease-in both;
+    animation: openScreen .5s ease-in both;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    user-select: none;
+}
+
+@keyframes openScreen {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+.sidebar {
+    position: relative;
+    /* border: 1px solid #00FFFC; */
+    border-left: 1px solid #00FFFC;
+    border-top: 1px solid #00FFFC;
+    border-bottom: 1px solid #00FFFC;
+    background: #00fffb18;
+    height: 95%;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    clip-path: polygon(90% 0, 100% 10%, 100% 90%, 90% 100%, 0 100%, 0 0);
+    z-index: 2;
+    left: 10px;
+}
+
+/* SideLines */
+.sidelinesContainer {
+    position: relative;
+    height: 95%;
+    width: 20px;
+    border-top: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.fulltick {
+    position: absolute;
+    width: 20px;
+    background: #FFFFFF;
+    height: 1px;
+}
+
+.halftick {
+    position: absolute;
+    width: 10px;
+    background: #FFFFFF;
+    height: 1px;
+}
+
+/* Bouncing Lines */
+.bouncingLine {
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    transform: scaleY(0);
+    z-index: -1;
+    animation: growShrink 2s ease-in-out infinite;
+}
+
+@keyframes growShrink {
+    0% {
+      transform: scaleY(0);
+    }
+
+    50% {
+      transform: scaleY(1);
+    }
+
+    100% {
+      transform: scaleY(0);
+    }
+}
+
+.versionContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px dashed #00FFFB1E;
+}
+
+/* Scroll Text */
+.scrollContainer {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    overflow: hidden;
+    padding: 5px;
+    padding-right: 30px;
+    font-size: 5px;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #00FFFB1E;
+}
+
+.scrollText {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+
+
+
+
+/* TOP_RIGHT */
+.decor1 {
+    position: absolute;
+    z-index: 2;
+
+    top: 10px;
+    right: 10px;
+
+    border-right: 2px solid #00fffc;
+    border-top: 2px solid #00fffc;
+    opacity: 50%;
+    height: 60px;
+    width: 110px;
+    border-top-right-radius: 20% 25%;
+}
+
+.decor1Arrow1 {
+    position: absolute;
+    top: -5px;
+    right: 110px;
+    height: 8px;
+    width: 8px;
+    background: #d4ff00;
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    animation: blinker 1s step-start infinite;
+    z-index: 2;
+}
+
+.decor1Arrow2 {
+    position: absolute;
+    top: -5px;
+    right: 120px;
+    height: 8px;
+    width: 8px;
+    background: #9dbc00;
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    animation: blinker 1s step-start infinite;
+    z-index: 2;
+}
+
+.decor1Arrow3 {
+    position: absolute;
+    top: -5px;
+    right: 130px;
+    height: 8px;
+    width: 8px;
+    background: #607400;
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    animation: blinker 1s step-start infinite;
+    z-index: 2;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+.decor2 {
+    position: absolute;
+    z-index: 2;
+    border-bottom: 2px dashed #00fffc;
+    border-top: 2px solid rgb(255, 255, 0);
+    height: 5px;
+    width: 100%;
+    bottom: 5px;
+    opacity: 50%;
+}

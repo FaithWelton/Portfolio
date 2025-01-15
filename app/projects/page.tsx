@@ -1,10 +1,12 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import styles from "./projects.module.css";
-import Container from "../Container/container";
-import Typing from "../Animations/Typing/Typing";
 import Link from "next/link";
 import { GetProject, GetRepos, UserRepo } from "@/app/hooks/useGithub";
 import { format } from "date-fns";
+import Typing from "../components/Animations/Typing/Typing";
+import Container from "../components/Container/container";
 
 const Projects = () => {
     const [repoData, setRepoData] = useState<string[]>([]);
@@ -48,9 +50,13 @@ const Projects = () => {
         <Link href={ project.html_url } rel="noopener noreferrer" target="_blank"> <Typing text={ "view on github" } elementId={ `project_link_${ project.id }` } style={{ letterSpacing: 1, fontSize: 12 }} /> </Link>
     </div>
 
-    return <Container title={ "My Projects" } extra={ <List /> }>
-        { selected && <ProjectDisplay project={ selected } /> }
-    </Container>
+    // return <Container title={ "My Projects" } extra={ <List /> }>
+    //     { selected && <ProjectDisplay project={ selected } /> }
+    // </Container>
+
+    return <div>
+        My Projects
+    </div>
 };
 
 export default Projects;
