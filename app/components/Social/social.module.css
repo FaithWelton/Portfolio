@@ -26,25 +26,32 @@
     border-bottom: 1px dotted black;
 }
 
-.tooltip .tooltiptext {
-    width: 120px;
+.tooltip .tooltipText {
     bottom: 100%;
     left: 50%;
     margin-left: -60px;
 }
 
-.tooltiptext {
+.tooltipText {
     visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
     position: absolute;
+    border: 1px solid #00FFFC;
+    background: #00FFFC;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
     z-index: 1;
 }
 
-.tooltip:hover .tooltiptext {
+.innerTooltipText {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+
+    inset: 1px;
+    background: #f6ff00;
+    color: #000000;
+    clip-path: inherit;
+}
+
+.tooltip:hover .tooltipText {
     visibility: visible;
 }

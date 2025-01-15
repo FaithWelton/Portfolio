@@ -9,7 +9,11 @@ const SocialLinks = () => {
     return <div className={ styles.container }>
         { socialLinks.map(({ name, path }, index) => (
             <Link key={ index } href={ path } className={ `${ styles.link } ${ styles.tooltip }` } aria-labelledby="tooltiptext">
-                <span className={ styles.tooltiptext } id="tooltiptext"> { capitalize(name) } </span>
+                <div className={ styles.tooltipText } id="tooltiptext">
+                    <div className={ styles.innerTooltipText }>
+                        { capitalize(name) }
+                    </div>
+                </div>
                 
                 <Glitchy>
                     <IconMap icon={ name } size={ 20 } color="#FFFFFF" />
