@@ -4,6 +4,7 @@ import { capitalize } from "@/app/util/capitalize";
 import IconMap from "@/app/util/getIcon";
 import Glitchy from "../Animations/Glitch/Glitchy";
 import styles from "./social.module.css";
+import Typing from "../Animations/Typing/Typing";
 
 const SocialLinks = () => {
     return <div className={ styles.container }>
@@ -11,7 +12,7 @@ const SocialLinks = () => {
             <Link key={ index } href={ path } className={ `${ styles.link } ${ styles.tooltip }` } aria-labelledby="tooltiptext">
                 <div className={ styles.tooltipText } id="tooltiptext">
                     <div className={ styles.innerTooltipText }>
-                        { capitalize(name) }
+                        <Typing text={ capitalize(name) } elementId={ `socials_${ name }` } style={{ letterSpacing: 2, fontSize: 15 }} />
                     </div>
                 </div>
                 
