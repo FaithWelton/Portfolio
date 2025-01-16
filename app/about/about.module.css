@@ -56,3 +56,40 @@
     clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 15% 0);
     box-shadow: inset 0px 0px 30px 5px #00a6a3;
 }
+
+
+
+
+.container {
+    position: relative;
+    bottom: 50%;
+    height: 400px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00fffc;
+    clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
+}
+
+.containerInside {
+    height: 398px;
+    width: 598px;
+    border: 2px solid #00fffc;
+    background: #006665;
+    clip-path: inherit;
+    inset: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    position: absolute;
+    border-bottom: 1px solid #00fffc;
+    padding-right: 10px;
+    transform: rotate(-30deg);
+    left: 5px;
+    top: 5px;
+    width: 50%;
+}

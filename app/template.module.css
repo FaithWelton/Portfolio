@@ -1,55 +1,54 @@
-.home {
-    border: 1px solid #00FFFC;
+.template {
     height: 100%;
     width: 100%;
+    padding: 10px;
+
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    
     align-items: center;
-    -webkit-animation: openScreen .5s ease-in both;
-    animation: openScreen .5s ease-in both;
-    padding-left: 10px;
-    padding-right: 10px;
+    border: 1px solid #00FFFC;
 
-    user-select: none;
-}
-
-@keyframes openScreen {
-    0% {
-        -webkit-transform: scaleY(0);
-        transform: scaleY(0);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-        opacity: 1;
-    }
+    z-index: -1;
 }
 
 .sidebar {
-    position: relative;
-    /* border: 1px solid #00FFFC; */
+    height: 100%;
+    width: 15%;
+    min-width: 100px;
+
+    display: flex;
+    flex-direction: column;
+
     border-left: 1px solid #00FFFC;
     border-top: 1px solid #00FFFC;
     border-bottom: 1px solid #00FFFC;
     background: #00fffb18;
-    height: 95%;
-    width: 15%;
+
+    clip-path: polygon(90% 10%, 90% 25%, 100% 40%, 100% 60%, 90% 75%, 90% 90%, 100% 100%, 0 100%, 0 0, 80% 0);
+}
+
+.home {
+    border: 1px solid #00FFFC;
+    height: 100%;
+    width: 100%;
+
     display: flex;
     flex-direction: row;
-    clip-path: polygon(90% 0, 100% 10%, 100% 90%, 90% 100%, 0 100%, 0 0);
-    z-index: 2;
-    left: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    user-select: none;
 }
 
 /* SideLines */
 .sidelinesContainer {
     position: relative;
-    height: 95%;
-    width: 20px;
+    height: 100%;
+    width: 25px;
     border-top: 1px solid #FFFFFF;
     border-left: 1px solid #FFFFFF;
     border-bottom: 1px solid #FFFFFF;
+    margin: 5px;
 }
 
 .fulltick {

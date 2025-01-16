@@ -1,13 +1,3 @@
-.menu {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    border: 1px solid #00fffb35;
-    border-radius: 50%;
-    z-index: 10;
-}
-      
 .outerItem {
     height: fit-content;
     width: fit-content;
@@ -41,10 +31,16 @@
     text-transform: uppercase;
 }
 
-.outerItem:hover .innerItem {
-    color: #ff00ae;
+.menu {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid #00fffb35;
+    border-radius: 50%;
+    z-index: 1;
 }
-  
+
 .menu ul {
     transform: rotate(180deg) translateY(-2em);
     transition: 1s ease-in-out;
@@ -52,38 +48,87 @@
 }
 
 .menu:hover ul {
-    transform: rotate(90deg) translateY(-1em) translateX(1.5em);
+    transform: rotate(0deg) translateY(-1em) translateX(1.5em);
     transition: 1s ease-in-out;
     opacity: 1;
 }
 
-/* Home */
-.menu li:nth-of-type(1) {
-    transform: rotate(-90deg);
-    position: absolute;
-    left: -0.5em;
-    top: -9em;
+.innerItem:hover {
+    color: #ff00ae;
 }
 
-/* About */
-.menu li:nth-of-type(2) {
-    transform: rotate(-45deg);
-    position: absolute;
-    left: 5.5em;
-    top: -6.5em;
+.active {
+    background: #f6ff00;
+    border: 1px solid #f6ff00;
 }
 
-/* Projects */
-.menu li:nth-of-type(3) {
-    position: absolute;
-    left: 8.5em;
-    top: 0.3em;
+.activeChild {
+    background: #00FFFC;
 }
 
-/* uncomment if we add another menu item */
-/* .menu li:nth-of-type(4) {
+.menu li:hover {
+    background: #ff00ae;
+    border: 1px solid #ff00ae;
+}
+
+.menu li {
+    position: absolute;    
+    transition: all 1s ease-in-out;
+}
+
+/* Home Route (/) */
+li:nth-child(1).active {
+    transform: rotate(0deg);
+    left: 7em;
+    top: 1.5em;
+}
+
+li:nth-child(1).active ~ li:nth-child(2) {
     transform: rotate(45deg);
-    position: absolute;
-    left: 5em;
-    top: 10.5em;
-} */
+    left: 4em;
+    top: 8.3em;
+}
+
+li:nth-child(1).active ~ li:nth-child(3) {
+    transform: rotate(90deg);
+    left: -3.5em;
+    top: 12em;
+}
+
+/* About Route */
+li:nth-child(2).active {
+    transform: rotate(0deg);
+    left: 6.5em;
+    top: 1.5em;
+}
+
+li:nth-child(1):not(.active):has(~ li:nth-child(2).active) {
+    transform: rotate(-45deg);
+    left: 4em;
+    top: -4.5em;
+}
+
+li:nth-child(2).active ~ li:nth-child(3) {
+    transform: rotate(45deg);
+    left: 4em;
+    top: 9em;
+}
+
+/* Projects Route */
+li:nth-child(3).active {
+    transform: rotate(0deg);
+    left: 7em;
+    top: 1.5em;
+}
+
+li:nth-child(1):not(.active):has(~ li:nth-child(3).active) {
+    transform: rotate(-90deg);
+    left: -2em;
+    top: -7em;
+}
+
+li:nth-child(2):not(.active):has(~ li:nth-child(3).active) {
+    transform: rotate(-45deg);
+    left: 4em;
+    top: -5em;
+}

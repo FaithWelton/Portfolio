@@ -5,20 +5,20 @@ import { useEffect, useState } from "react";
 import { GetProject } from "@/app/hooks/useGithub";
  
 const VersionUpdate = () => {
-  const [dateModified, setDateModified] = useState<Date>(new Date());
+  const [dateModified, setDateModified] = useState<Date>(new Date);
   const style = { fontSize: "5px", letterSpacing: "3px", };
 
-  useEffect(() => {
-    const GetData = async () => {
-      let repoInfo = await GetProject("portfolio");
-      if (!repoInfo) return;
+  // useEffect(() => {
+  //   const GetData = async () => {
+  //     let repoInfo = await GetProject("portfolio");
+  //     if (!repoInfo) return;
 
-      let newDate = new Date(repoInfo.updated_at);
-      // console.log(`Last Updated At: ${ newDate }`)
-      setDateModified(newDate);
-    };
-    GetData();
-  }, []);
+  //     let newDate = new Date(repoInfo.updated_at);
+  //     setDateModified(newDate);
+  //   };
+    
+  //   GetData();
+  // }, []);
     
   return <div style={{ display: "flex", flexDirection: "column", width: "100%", paddingTop: "5px", paddingBottom: "10px", paddingLeft: "5px", height: "6%", padding: "5px" }}>
     <Glitchy>

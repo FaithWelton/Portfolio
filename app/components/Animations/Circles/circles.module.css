@@ -7,7 +7,7 @@
     transform: translate(-50%, -50%);
     background: #00fffb18;
     border-radius: 50%;
-    z-index: 2;
+    z-index: -1;
     opacity: 40%;
 }
   
@@ -18,6 +18,7 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
     transform-origin: center;
+    z-index: inherit;
 }
     
 .circle1 {
@@ -31,6 +32,7 @@
     animation-timing-function: cubic-bezier(.8, .2, .2, .8);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index: inherit;
 }
     
 .circle2 {
@@ -44,6 +46,7 @@
     animation-timing-function: cubic-bezier(.8, .2, .2, .8);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index: inherit;
 }
     
 .circle3 {
@@ -57,6 +60,7 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: forward;
+    z-index: inherit;
 }
     
 .circle4 {
@@ -70,18 +74,21 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: forward;
+    z-index: inherit;
 }
     
 .circle5 {
     border: 5px solid #FFFFFF;
     width: 10%;
     height: 10%;
+    z-index: inherit;
 }
     
 .circle6 {
     border: 30px solid #00fffb61;
     width: 68%;
     height: 68%;
+    z-index: inherit;
 }
     
 .circle7 {
@@ -97,6 +104,7 @@
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index: inherit;
 }
     
 .circle8 {
@@ -108,6 +116,7 @@
     animation-timing-function: cubic-bezier(.7, .3, .3, .7);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index: inherit;
 }
     
 .circle9 {
@@ -119,6 +128,7 @@
     animation-timing-function: cubic-bezier(.7, .3, .3, .7);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index: inherit;
 }
     
 .circle10 {
@@ -130,12 +140,14 @@
     animation-timing-function: cubic-bezier(.7, .3, .3, .7);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index: inherit;
 }
     
 .circleDot {
     width: 3%;
     height: 3%;
     background: #00FFFC;
+    z-index: inherit;
 }
     
 .radiallines {
@@ -145,6 +157,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: inherit;
 }
 
 .radialLine1 {
@@ -159,6 +172,7 @@
     animation-timing-function: cubic-bezier(.7, .3, .3, .7);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index: inherit;
 }
       
 .radialLine2 {
@@ -173,6 +187,7 @@
     animation-timing-function: cubic-bezier(.7, .3, .3, .7);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index: inherit;
 }
       
 .radialLine3 {
@@ -189,6 +204,7 @@
     animation-timing-function: cubic-bezier(.7, .3, .3, .7);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index: inherit;
 }
       
 .radialLine4 {
@@ -205,6 +221,7 @@
     animation-timing-function: cubic-bezier(.7, .3, .3, .7);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index: inherit;
 }
   
 @keyframes rotate1 {

@@ -41,36 +41,46 @@ const Template = ({ children }: { children: React.ReactNode }) => {
         "",
         "",
     ];
-    
-    return <div className={ styles.home }>
-        <div className={ styles.sidelinesContainer }>
-            <div className={ styles.sideline }>
-                { percents.map(percent => <div key={ percent } className={ percent[1] === "5" ? styles.halftick : styles.fulltick } style={{ top: `${ percent }%` }}> </div> )}
-            </div>
+
+    const Sidelines = () => <div className={ styles.sidelinesContainer }>
+        <div className={ styles.sideline }>
+            { percents.map(percent => <div key={ percent } className={ percent[1] === "5" ? styles.halftick : styles.fulltick } style={{ top: `${ percent }%` }}> </div> )}
         </div>
+    </div>
 
-        <div className={ styles.sidebar }>
-            <div style={{ height: "100%", width: "2px" }}> <div className={ styles.bouncingLine } style={{ background: "#ff00ae" }} /> </div>
-            <div style={{ height: "100%", width: "2px" }}> <div className={ styles.bouncingLine } style={{ background: "#f6ff00", animationDelay: "3s" }} /> </div>
+    const Scrolly = () => <div className={ styles.scrollContainer }>
+        <div className={styles.scrollText} id="scrollingText">
+            { messages.map((msg, index) => (
+                <p key={ index }> { msg } <br /> </p>
+            ))}
+
+            { messages.map((msg, index) => (
+            // Extra copy for smooth transition for looping
+                <p key={ index + messages.length }> { msg } <br /> </p>
+            ))}
+        </div>
+    </div>
+
+    const Sidebar = () => <div className={ styles.sidebar }>
+        <div style={{ height: "100%", width: "2px" }}> <div className={ styles.bouncingLine } style={{ background: "#ff00ae" }} /> </div>
+        <div style={{ height: "100%", width: "2px" }}> <div className={ styles.bouncingLine } style={{ background: "#f6ff00", animationDelay: "3s" }} /> </div>
+
+        <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
+            <div className={ styles.versionContainer }> <VersionUpdate /> </div>
+            <Scrolly />
+        </div>
+    </div>
+
+    const bouncy1 = () => <div style={{ height: "100%", width: "2px" }}> <div className={ styles.bouncingLine } style={{ background: "#ff00ae" }} /> </div>
+    const bouncy2 = () => <div style={{ height: "100%", width: "2px" }}> <div className={ styles.bouncingLine } style={{ background: "#f6ff00", animationDelay: "3s" }} /> </div>
+
+
+    return <div className={ styles.template }>
+        <Sidelines />
         
-            <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
-                <div className={ styles.versionContainer }>
-                    <VersionUpdate />
-                </div>
-                
-                <div className={styles.scrollContainer}>
-                    <div className={styles.scrollText} id="scrollingText">
-                        { messages.map((msg, index) => (
-                            <p key={ index }> { msg } <br /> </p>
-                        ))}
-
-                        { messages.map((msg, index) => (
-                        // Extra copy for smooth transition for looping
-                            <p key={ index + messages.length }> { msg } <br /> </p>
-                        ))}
-                    </div>
-                </div>
-            </div>
+        <div className={ styles.sidebar }>
+            <div className={ styles.versionContainer }> <VersionUpdate /> </div>
+            <Scrolly />
         </div>
 
         <Menu />
@@ -78,9 +88,20 @@ const Template = ({ children }: { children: React.ReactNode }) => {
         <View> { children } </View>
 
         <SocialLinks />
-
         <Warn />
     </div>
+
+    // return <div className={ styles.home }>
+    //     <Sidelines />
+    //     <Sidebar />
+
+    //     <Menu />
+
+    //     <View> { children } </View>
+
+    //     <SocialLinks />
+    //     <Warn />
+    // </div>
 };
 
 export default Template;
