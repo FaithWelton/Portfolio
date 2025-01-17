@@ -24,20 +24,20 @@ export const config = {
     warning: ["This website is under active construction!"],
 };
 
-export const MenuItems: MenuItem[] = [
+export const menuItems: MenuItem[] = [
     { label: "home", route: "/" },
     { label: "about", route: "/about" },
     { label: "projects", route: "/projects" },
 ];
 
-export const socialLinks: ListProps[] = [
-    { name: "github", description: "", path: "https://github.com/FaithWelton" },
-    { name: "linkedin", description: "", path: "https://www.linkedin.com/in/faithwelton/" },
-    { name: "email", description: "", path: "mailto:email@faithisa.dev" },
+export const socials: ListProps[] = [
+    { label: "github", description: "", path: "https://github.com/FaithWelton" },
+    { label: "linkedin", description: "", path: "https://www.linkedin.com/in/faithwelton/" },
+    { label: "email", description: "", path: "mailto:email@faithisa.dev" },
 ];
 
 export const projects: ListProps[] = [
-    { name: "portfolio", description: "Personal Portfolio Website", path: "https://github.com/FaithWelton/PersonalSite2.0" },
-    { name: "littlestTaskBot", description: "Telegram Bot that responds to various commands", path: "https://github.com/FaithWelton/LittlestTaskBot" },
-    { name: "SET2022Capstone", description: "Digital Form Creation - Capstone Project 2022", path: "https://github.com/FaithWelton/SET2022Capstone" },
+    { label: "portfolio", description: "Personal Portfolio Website", path: "https://github.com/FaithWelton/PersonalSite2.0" },
+    { label: "littlestTaskBot", description: "Telegram Bot that responds to various commands", path: "https://github.com/FaithWelton/LittlestTaskBot" },
+    { label: "SET2022Capstone", description: "Digital Form Creation - Capstone Project 2022", path: "https://github.com/FaithWelton/SET2022Capstone" },
 ];

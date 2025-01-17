@@ -4,8 +4,8 @@ import styles from "./template.module.css";
 import VersionUpdate from "./components/VersionUpdate/VersionUpdate";
 import Menu from "./components/Menu/Menu";
 import View from "./components/View/View";
-import SocialLinks from "./components/Social/socialLinks";
 import Warn from "./components/Animations/Warn/Warn";
+import SocialLinks from "./components/Social/SocialLinks";
 
 const Template = ({ children }: { children: React.ReactNode }) => {
     const percents = ["05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95"];
