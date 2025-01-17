@@ -6,16 +6,25 @@ import styles from "./gridbg.module.css";
 function randomRange(min: number, max: number) {
     return Math.random() * (max - min) + min;
 };
+
+type Animated = {
+    x: number;
+    y: number;
+    speed: number;
+    height: number;
+};
+
+type Dots = { x: number; y: number; };
   
 const GridBackground = () => {    
-    const [animatedLines, setAnimatedLines] = useState<{ x: number; y: number; speed: number; height: number; }[]>([]);
-    const [gridDots, setGridDots] = useState<{ x: number; y: number; }[]>([]);
+    const [animatedLines, setAnimatedLines] = useState<Animated[]>([]);
+    const [gridDots, setGridDots] = useState<Dots[]>([]);
     const gridCellSize = 20;
 
     const createAnimatedLines = () => {
-        const lines = [];
-        let height = window.innerHeight;
-        let width = window.innerWidth;
+        const lines: Animated[] = [];
+        let height: number = window.innerHeight;
+        let width: number = window.innerWidth;
 
         for (let x = gridCellSize; x <= width; x += gridCellSize) {
             let y = randomRange(height * 2, height * 4);
@@ -28,17 +37,17 @@ const GridBackground = () => {
     useEffect(() => {
         const animateLines = () => {
             setAnimatedLines(prevLines =>
-                    prevLines.map(line => {
-                        let newY = line.y - line.speed;
+                prevLines.map(line => {
+                    let newY = line.y - line.speed;
 
-                        if (newY < -window.innerHeight) {
-                            newY = window.innerHeight;
-                            line.height = randomRange(25, 150);
-                            line.speed = randomRange(1, 5);
-                        };
+                    if (newY < -window.innerHeight) {
+                        newY = window.innerHeight;
+                        line.height = randomRange(25, 150);
+                        line.speed = randomRange(1, 5);
+                    };
 
-                        return { ...line, y: newY };
-                    })
+                    return { ...line, y: newY };
+                })
             );
 
             requestAnimationFrame(animateLines);
@@ -50,7 +59,7 @@ const GridBackground = () => {
     useEffect(() => { createAnimatedLines(); }, []);
 
     useEffect(() => {
-        const dots = [];
+        const dots: Dots[] = [];
         for (let x = gridCellSize; x < window.innerWidth; x += gridCellSize) {
             for (let y = gridCellSize; y < window.innerHeight; y += gridCellSize) {
                 dots.push({ x, y });
@@ -58,21 +67,19 @@ const GridBackground = () => {
         };
 
         setGridDots(dots);
-    }, [])
+    }, []);
 
     return <div className={ styles.background }>
         <div className={ styles.grid }>
-        { gridDots.map((dot, index) => (
-            <div key={index} className={ styles.gridDot }
-                style={{ left: dot.x, top: dot.y }}
-            />
-        ))}
+            { gridDots.map((dot, index) =>
+                <div key={index} className={ styles.gridDot } style={{ left: dot.x, top: dot.y }} />
+            )}
 
-        { animatedLines.map((line, index) => (
-            <div key={index} className={ styles.animatedLine }
-                style={{ left: line.x, top: line.y, height: line.height, animationDuration: `${ line.speed }s` }}
-            />
-        ))}
+            { animatedLines.map((line, index) =>
+                <div key={index} className={ styles.animatedLine }
+                    style={{ left: line.x, top: line.y, height: line.height, animationDuration: `${ line.speed }s` }}
+                />
+            )}
         </div>
     </div>
 };

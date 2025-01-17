@@ -2,13 +2,15 @@
     font-size: 10px;
     letter-spacing: 10px;
     text-transform: uppercase;
-        
-    /* animation: typing;
-    animation-duration: 1.5s;
-    animation-timing-function: steps(30, end);
-    animation-fill-mode: forwards; */
 }
 
+.animate {
+    animation: typing;
+    animation-duration: 5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+}
+  
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }

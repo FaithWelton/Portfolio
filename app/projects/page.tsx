@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 import styles from "./projects.module.css";
 import Link from "next/link";
-import { GetProject, GetRepos, UserRepo } from "@/app/hooks/useGithub";
+import { GetProject, GetRepos } from "@/app/hooks/useGithub";
 import { format } from "date-fns";
 import Typing from "../components/Animations/Typing/Typing";
-import Container from "../components/Container/container";
+import { UserRepo } from "../util/types";
 
 const Projects = () => {
     const [repoData, setRepoData] = useState<string[]>([]);

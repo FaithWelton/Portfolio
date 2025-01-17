@@ -1,14 +1,9 @@
-import GridBackground from "../Animations/GridBackground/gridbg";
 import styles from "./view.module.css";
 
-const View = ({ children }: { children?: any; }) => {
-
-    return <div className={ styles.view }>
+const View = ({ children }: { children?: any; }) => <div className={ styles.view }>
+    <div style={{ height: "100%", width: "92%", padding: "10px" }}>
         { children }
     </div>
-    // return <div className={ styles.container }>
-    //     { children }
-    // </div>
-};
+</div>
 
 export default View;

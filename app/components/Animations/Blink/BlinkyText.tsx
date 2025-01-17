@@ -1,12 +1,10 @@
+import Typing from "../Typing/Typing";
 import styles from "./blinky.module.css";
-import pageStyles from "@/app/page.module.css";
 
-interface Props {
-    children: any;
-}
+type Blinky = { text: string; };
 
-const BlinkyText = ({ children }: Props) => {
-    return <span className={ `${ pageStyles.spacedText } ${ styles.blink }` }> { children } </span>
-};
+const BlinkyText = ({ text }: Blinky) => <span className={ styles.blink }>
+    <Typing text={ text } elementId={ text } />
+</span>
 
 export default BlinkyText;

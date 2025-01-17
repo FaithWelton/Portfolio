@@ -1,4 +1,59 @@
 .container {
+    height: 95%;
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    border: 1px solid orange;
+    height: fit-content;
+    width: 100%;
+}
+
+.photoBox {
+    height: 250px;
+    width: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #00FFFC;
+    background: #00FFFC;
+
+    clip-path: polygon(5% 30%, 0 20%, 0 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 50%, 5% 40%);
+}
+
+.innerPhotoBox {
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+    min-width: fit-content;
+    min-height: fit-content;
+    padding: 5px;
+
+    background: #f6ff00;
+    color: #000000;
+
+    text-decoration: none;
+
+    clip-path: inherit;
+
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.content {
+    border: 1px solid green;
+    height: fit-content;
+    width: 75%;
+}
+
+/* .container {
     border: 1px solid #00fffc;
     height: 100%;
     width: 100%;
@@ -92,4 +147,4 @@
     left: 5px;
     top: 5px;
     width: 50%;
-}
+} */

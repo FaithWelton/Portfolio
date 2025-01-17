@@ -1,0 +1,23 @@
+.container {
+    position: relative;
+    height: 100%;
+    width: 25px;
+    border-top: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    margin: 5px;
+}
+
+.fulltick {
+    position: absolute;
+    width: 20px;
+    background: #FFFFFF;
+    height: 1px;
+}
+
+.halftick {
+    position: absolute;
+    width: 10px;
+    background: #FFFFFF;
+    height: 1px;
+}

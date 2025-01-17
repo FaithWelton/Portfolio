@@ -9,6 +9,8 @@
     border-radius: 50%;
     z-index: -1;
     opacity: 40%;
+
+    filter: drop-shadow(0 1px 1px);
 }
   
 .circle {

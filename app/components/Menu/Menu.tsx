@@ -8,7 +8,7 @@ const Menu = () => <div className={ styles.menu }>
     <AnimCircles />
 
     <ul className={ styles.list }>
-        { menuItems.map((item, idx) => <MenuItem key={ idx } label={ item.label } route={ item.route } /> )}
+        { menuItems.map((item, index) => <MenuItem key={ index } label={ item.label } route={ item.route } /> )}
     </ul>
 </div>
 

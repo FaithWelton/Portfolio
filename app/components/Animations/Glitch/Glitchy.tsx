@@ -1,17 +1,18 @@
-import styles from "./glitchy.module.css";
-import pageStyles from "@/app/page.module.css";
 import { CSSProperties } from "react";
+import styles from "./glitchy.module.css";
 
-interface Props {
-    children: any;
+type Props = {
+    children: JSX.Element | JSX.Element[];
     style?: CSSProperties;
-    className?: string;
-}
-
-const Glitchy = ({ children, style }: Props) => {
-    return <div style={{ ...style }} className={ `${ pageStyles.spacedText } ${ styles.content } ${ styles.layers } ${ styles.glitchy }` } data-text={ children }>
-        { children }
-    </div>
+    toggleOff?: boolean;
 };
+
+const Glitchy = ({ children, style, toggleOff }: Props) => <div
+    style={{ ...style }}
+    className={ `${ styles.content } ${ !toggleOff && styles.glitchy }` }
+    data-text={ typeof(children) === "string" ? children : "" }
+>
+    { children }
+</div>
 
 export default Glitchy;
