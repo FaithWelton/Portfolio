@@ -1,4 +1,4 @@
-import { ListProps } from "./types";
+import { ListProps, MenuItem } from "./types";
 
 export const config = {
     title: "Portfolio",
@@ -23,6 +23,12 @@ export const config = {
     },
     warning: ["This website is under active construction!"],
 };
+
+export const MenuItems: MenuItem[] = [
+    { label: "home", route: "/" },
+    { label: "about", route: "/about" },
+    { label: "projects", route: "/projects" },
+];
 
 export const socialLinks: ListProps[] = [
     { name: "github", description: "", path: "https://github.com/FaithWelton" },

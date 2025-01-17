@@ -1,5 +1,7 @@
-export interface NavItem {
+export type NavItem = {
     [key: string]: { name: string; };
 };
 
-export interface ListProps { name: string; description: string; path: string; };
+export type ListProps = { name: string; description: string; path: string; };
+
+export type MenuItem = { label: string; route: string; };

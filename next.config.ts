@@ -12,15 +12,6 @@ const nextConfig: NextConfig = {
             }
         ]
     },
-    // REMOVE THIS BEFORE COMMITTING:
-    experimental: {
-        serverActions: {
-            allowedOrigins: [
-                "localhost:3000",
-                "https://xdnkb781-3000.use.devtunnels.ms/",
-            ]
-        }
-    }
 };
 
 export default nextConfig;
