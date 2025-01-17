@@ -7,6 +7,7 @@ import Warn from "./components/Animations/Warn/Warn";
 import Sidelines from "./components/Decoration/Sidelines/Sidelines";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { Bouncy1, Bouncy2 } from "./components/Decoration/BouncyLines/Bouncy";
+import SocialLinks from "./components/Social/socialLinks";
 
 const Template = ({ children }: { children: React.ReactNode }) => {
     const error = new Error("OOPS")
@@ -23,7 +24,7 @@ const Template = ({ children }: { children: React.ReactNode }) => {
             { children }
         </View>
 
-        {/* <SocialLinks /> */}
+        <SocialLinks />
         <Warn />
     </div>
 };
