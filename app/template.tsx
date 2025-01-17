@@ -4,11 +4,10 @@ import styles from "./template.module.css";
 import Menu from "./components/Menu/Menu";
 import View from "./components/View/View";
 import Warn from "./components/Animations/Warn/Warn";
-import SocialLinks from "./components/Social/SocialLinks";
 import Sidelines from "./components/Decoration/Sidelines/Sidelines";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { Bouncy1, Bouncy2 } from "./components/Decoration/BouncyLines/Bouncy";
-import { ErrorBoundary, ErrorComponent } from "next/dist/client/components/error-boundary";
+import SocialLinks from "./components/Social/SocialLinks";
 
 const Template = ({ children }: { children: React.ReactNode }) => {
     const error = new Error("OOPS")
