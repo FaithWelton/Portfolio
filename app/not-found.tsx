@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Typing from "./components/Animations/Typing/Typing";
-import Glitchy from "./components/Animations/Glitch/Glitchy";
 
 const NotFound = () => {        
 	return <div style={{ height: "100%", width: "100%" }}>

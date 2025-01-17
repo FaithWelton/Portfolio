@@ -2,7 +2,7 @@ import { CSSProperties } from "react";
 import styles from "./glitchy.module.css";
 
 type Props = {
-    children: JSX.Element | JSX.Element[];
+    children: any;
     style?: CSSProperties;
     toggleOff?: boolean;
 };
