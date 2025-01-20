@@ -7,6 +7,9 @@ import { config } from "../util/config";
 import Image from "next/image";
 import { UserProfile } from "../util/types";
 import styles from "./about.module.css";
+import Glow from "../components/Animations/Neon/Glow";
+import Glitchy from "../components/Animations/Glitch/Glitchy";
+import Container from "../components/Container/Container";
 
 const About = () => {
     const [user, setUser] = useState<UserProfile>(config.defaultUser);
@@ -23,32 +26,35 @@ const About = () => {
     
     return <div className={ styles.container }>
         <div id="HEAD" className={ styles.head }>
-            <Typing text={ "about me" } elementId="about" style={{ letterSpacing: 5, fontSize: 13 }}/>
+            <Glitchy> <Glow text="/about" color="pink" /> </Glitchy>
         </div>
 
-        <div id="IMAGE" className={ styles.photoBox }>
-            <div className={ styles.innerPhotoBox }>                
-                { user.avatar_url && <Image
+        <div id="BODY" style={{ height: "100%", width: "100%", display: "flex", flexDirection: "row", justifyContent: "space-evenly", padding: "10px" }}>
+            <Container id={ "bio" } style={{ height: "100%", width: "60%", display: "flex", flexDirection: "column" }}>
+                <Typing text={ `name: ${ user.name }` } elementId={ `about_name` } style={{ letterSpacing: 1, fontSize: 12, justifySelf: "flex-end" }} />
+                <Typing text={ `location: ${ user.location }` } elementId={ `about_location` } style={{ letterSpacing: 1, fontSize: 12, justifySelf: "flex-end" }} /><br/>
+
+                <br />
+
+                { user.bio.length === 1
+                    ? <Typing text={ `bio: ${ user.bio }` } elementId={ `about_bio` } style={{ letterSpacing: 1, fontSize: 12 }} />
+                    : user.bio.map((item, index) => <Typing key={ index } text={ item } elementId={ `about_bio_${ index }` } style={{ letterSpacing: 1, fontSize: 12, paddingBottom: "10px" }} />
+                )}
+
+                <br />
+
+                <Glow text="Thanks for Visiting!" color="blue" style={{ color: "#000000", marginLeft: "25%" }} />
+            </Container>
+
+            { user.avatar_url && <Container id={ "image" } style={{ height: "250px", width: "35%" }}>
+                <Image
                     src={ user.avatar_url }
                     alt="Profile Image"
                     quality={ 100 }
                     priority
                     fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    style={{ border: "3px double #00fffc" }}
-                /> }
-            </div>
-        </div>
-
-        <div id="CONTENT" className={ styles.content }>
-            <Typing text={ `name: ${ user.name }` } elementId={ `about_name` } style={{ letterSpacing: 1, fontSize: 12 }} /><br/>
-            <Typing text={ `location: ${ user.location }` } elementId={ `about_location` } style={{ letterSpacing: 1, fontSize: 12 }} /><br/>
-            
-            { user.bio.length === 1
-                ? <Typing text={ `bio: ${ user.bio }` } elementId={ `about_bio` } style={{ letterSpacing: 1, fontSize: 12 }} />
-                : user.bio.map((item, index) => <Fragment key={ index }>
-                    <Typing text={ item } elementId={ `about_bio_${ index }` } style={{ letterSpacing: 1, fontSize: 12 }} /><br/>
-                </Fragment>
-            )}
+                />
+            </Container> }
         </div>
     </div>
 };

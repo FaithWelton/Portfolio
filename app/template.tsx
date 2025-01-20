@@ -10,8 +10,6 @@ import { Bouncy1, Bouncy2 } from "./components/Decoration/BouncyLines/Bouncy";
 import SocialLinks from "./components/Social/socialLinks";
 
 const Template = ({ children }: { children: React.ReactNode }) => {
-    const error = new Error("OOPS")
-
     return <div className={ styles.template }>
         <Sidelines />
         <Bouncy1 /><Bouncy2 />

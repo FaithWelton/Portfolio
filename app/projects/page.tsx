@@ -7,6 +7,8 @@ import { GetProject, GetRepos } from "@/app/hooks/useGithub";
 import { format } from "date-fns";
 import Typing from "../components/Animations/Typing/Typing";
 import { UserRepo } from "../util/types";
+import Glow from "../components/Animations/Neon/Glow";
+import Glitchy from "../components/Animations/Glitch/Glitchy";
 
 const Projects = () => {
     const [repoData, setRepoData] = useState<string[]>([]);
@@ -50,12 +52,11 @@ const Projects = () => {
         <Link href={ project.html_url } rel="noopener noreferrer" target="_blank"> <Typing text={ "view on github" } elementId={ `project_link_${ project.id }` } style={{ letterSpacing: 1, fontSize: 12 }} /> </Link>
     </div>
 
-    // return <Container title={ "My Projects" } extra={ <List /> }>
-    //     { selected && <ProjectDisplay project={ selected } /> }
-    // </Container>
+    return <div className={ styles.container }>
+        <div id="HEAD" className={ styles.head }>
+            <Glitchy> <Glow text="/projects" color="yellow" /> </Glitchy>
+        </div>
 
-    return <div>
-        My Projects
     </div>
 };
 
