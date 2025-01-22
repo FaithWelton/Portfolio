@@ -62,7 +62,7 @@ const Projects = () => {
                 </div>
 
                 <div style={{ height: "20%", width: "100%", alignContent: "flex-end" }}>
-                    <Link href={ selected.html_url } rel="noopener noreferrer" target="_blank"> <Typing text={ "view on github" } elementId={ `project_link_${ selected.id }` } style={{ letterSpacing: 1, fontSize: 12 }} /> </Link>
+                    <Link href={ selected.html_url } rel="noopener noreferrer" target="_blank" className={ styles.link }> <Typing text={ "view on github" } elementId={ `project_link_${ selected.id }` } style={{ letterSpacing: 1, fontSize: 12 }} /> </Link>
                 </div>
             </Container> }
         </div>

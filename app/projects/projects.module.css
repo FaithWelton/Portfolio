@@ -62,3 +62,15 @@
     border: 4px double #ff00ae;
     color: #ff00ae;
 }
+
+.link {
+    color: #ff00ae;
+}
+
+.link:hover {
+    color: #bb0180;
+}
+
+.link:visited {
+    color: #600042;
+}
