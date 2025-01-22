@@ -1,7 +1,6 @@
 .background {
     background-image: radial-gradient(#003333 25%, #000);
     position: absolute;
-    z-index: -1;
     overflow: hidden;
     height: 100%;
     width: 100%;

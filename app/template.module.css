@@ -8,8 +8,6 @@
     
     align-items: center;
     border: 1px solid #00FFFC;
-
-    z-index: -1;
 }
 
 .home {
@@ -27,8 +25,6 @@
 /* TOP_RIGHT */
 .decor1 {
     position: absolute;
-    z-index: 2;
-
     top: 10px;
     right: 10px;
 
@@ -49,7 +45,6 @@
     background: #d4ff00;
     clip-path: polygon(0 50%, 100% 100%, 100% 0);
     animation: blinker 1s step-start infinite;
-    z-index: 2;
 }
 
 .decor1Arrow2 {
@@ -61,7 +56,6 @@
     background: #9dbc00;
     clip-path: polygon(0 50%, 100% 100%, 100% 0);
     animation: blinker 1s step-start infinite;
-    z-index: 2;
 }
 
 .decor1Arrow3 {
@@ -73,7 +67,6 @@
     background: #607400;
     clip-path: polygon(0 50%, 100% 100%, 100% 0);
     animation: blinker 1s step-start infinite;
-    z-index: 2;
 }
 
 @keyframes blinker {
@@ -82,7 +75,6 @@
 
 .decor2 {
     position: absolute;
-    z-index: 2;
     border-bottom: 2px dashed #00fffc;
     border-top: 2px solid rgb(255, 255, 0);
     height: 5px;

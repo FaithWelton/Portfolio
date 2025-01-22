@@ -10,8 +10,6 @@
     border-bottom: 1px solid #00FFFC;
     background: #00fffb18;
 
-    z-index: -1;
-
     clip-path: polygon(2% 8%, 0 0, 100% 0, 100% 100%, 0 100%, 2% 90%, 2% 75%, 8% 60%, 8% 40%, 2% 25%);
 
     -webkit-animation: openScreen .5s ease-in both;

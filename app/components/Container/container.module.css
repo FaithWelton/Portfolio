@@ -29,7 +29,4 @@
     clip-path: inherit;
 
     overflow-y: scroll;
-
-    scrollbar-width: 5px;
-    scrollbar-track-color: purple;
 }

@@ -38,7 +38,6 @@
     border: 1px solid #00FFFC;
     background: #00FFFC;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
-    z-index: 1;
 }
 
 .innerTooltipText {
