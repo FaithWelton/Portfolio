@@ -1,6 +1,5 @@
 .container {
     position: absolute;
-    z-index: 2;
     height: 125px;
     width: 125px;
     bottom: 10px;
@@ -22,21 +21,52 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 25px;
+    padding-left: 8px;
 
     clip-path: polygon(100% 100%, 0% 100%, 50% 0%);
     background: #d4ff00;
     border: 1px dashed #d4ff00;
 }
 
+.warningContainer {
+    position: absolute;
+    left: 110px;
+
+    border: 1px solid #00FFFC;
+    background: #00FFFC;
+
+    min-width: fit-content;
+    max-width: 100%;
+    width: 200px;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
+}
+
+.warningInner {
+    padding: 5px;
+    background: #d4ff00;
+    color: #000000;
+
+    width: inherit;
+
+    clip-path: inherit;
+}
+
 .warningMessage {
-    border: 1px solid #d4ff00;
+    position: absolute;
+    left: 110px;
+
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+
+    /* border: 1px solid #d4ff00;
     background: #d4ff002f;
     position: absolute;
-    z-index: 2;
     left: 110px;
-    width: 310px;
-    padding: 10px;
+    width: fit-content;
+    max-width: 100%;
+    padding: 10px; */
 }
 
 /* Exclaim SVG */

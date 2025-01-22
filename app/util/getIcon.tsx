@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { TbMailFilled } from "react-icons/tb";
+import Glitchy from "../components/Animations/Glitch/Glitchy";
 
 interface IconMapProps {
     icon: string;
@@ -14,7 +15,7 @@ const IconMap: React.FC<IconMapProps> = ({ icon, size }) => {
         email: <TbMailFilled size={ size } />,
     };
 
-    return iconMap[icon];
+    return <Glitchy> { iconMap[icon] } </Glitchy>;
 };
 
 export default IconMap;

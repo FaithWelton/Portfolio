@@ -1,85 +1,278 @@
-.animation {
+.circleContainer {
+    width: 200px;
+    height: 200px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none;
-}
+    background: #00fffb18;
+    border-radius: 50%;
+    opacity: 40%;
 
-.animation .circle {
+    filter: drop-shadow(0 1px 1px);
+}
+  
+.circle {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 50%;
     transform-origin: center;
-    background-color: transparent;
-    pointer-events: none;
+}
+    
+.circle1 {
+    border: 5px solid transparent;
+    border-top: 5px solid #00FFFC;
+    border-bottom: 5px solid #00FFFC;
+    width: 100%;
+    height: 100%;
+    animation-name: rotate1;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.8, .2, .2, .8);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+    
+.circle2 {
+    border: 2px solid transparent;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+    width: 90%;
+    height: 90%;
+    animation-name: rotate2;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.8, .2, .2, .8);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+    
+.circle3 {
+    border: 10px solid transparent;
+    border-bottom: 10px solid #00FFFC;    
+    border-top: 10px solid #00FFFC;
+    width: 80%;
+    height: 80%;
+    animation-name: rotate3;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+}
+    
+.circle4 {
+    border: 10px solid transparent;
+    border-left: 10px dashed #00FFFC;   
+    border-right: 10px dashed #00FFFC;
+    width: 80%;
+    height: 80%;
+    animation-name: rotate3;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+}
+    
+.circle5 {
+    border: 5px solid #FFFFFF;
+    width: 10%;
+    height: 10%;
+}
+    
+.circle6 {
+    border: 30px solid #00fffb61;
+    width: 68%;
+    height: 68%;
+}
+    
+.circle7 {
+    border: 10px solid transparent;
+    border-left: 10px dashed #FFFFFF;   
+    border-right: 10px dashed #FFFFFF;
+    border-top: 10px dashed #FFFFFF;
+    border-bottom: 10px dashed #FFFFFF;
+    width: 18%;
+    height: 18%;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+    
+.circle8 {
+    border: 8px dashed #FFFFFF;
+    width: 50%;
+    height: 50%;
+    animation-name: spin1;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.7, .3, .3, .7);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+    
+.circle9 {
+    border: 2px dashed #f6ff00;
+    width: 30%;
+    height: 30%;
+    animation-name: spin2;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.7, .3, .3, .7);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+    
+.circle10 {
+    border: 5px dashed #00FFFC;
+    width: 40%;
+    height: 40%;
+    animation-name: spin3;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.7, .3, .3, .7);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+    
+.circleDot {
+    width: 3%;
+    height: 3%;
+    background: #00FFFC;
+}
+    
+.radiallines {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.animation .circleElement01 {
-    width: 13vw;
-    height: 13vw;
-    border: 0.25vw solid #00fffc;
-    border-radius: 50%;
-    animation: animationCircle 3s ease-in-out 3s forwards infinite, animationCircleElement01 3s linear 3s forwards infinite;
+.radialLine1 {
+    border-left: 1px solid #FFFFFF;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: shrink;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.7, .3, .3, .7);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+      
+.radialLine2 {
+    border-top: 1px solid #FFFFFF;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: shrink;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.7, .3, .3, .7);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+      
+.radialLine3 {
+    border-top: 1px solid #FFFFFF;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transform-origin: center;
     opacity: 0;
-    pointer-events: none;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.7, .3, .3, .7);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
-
-.animation .circleElement02 {
-    width: 9vw;
-    height: 9vw;
-    border: 0.5vw solid #017e7c;
-    border-radius: 50%;
-    animation: animationCircle 3s ease-in-out 3s forwards infinite, animationCircleElement02 3s linear 3s forwards infinite;
+      
+.radialLine4 {
+    border-top: 1px solid #FFFFFF;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transform-origin: center;
     opacity: 0;
-    pointer-events: none;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.7, .3, .3, .7);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
-
-.animation .circleElement03 {
-    width: 4vw;
-    height: 4vw;
-    border: 1vw solid #00413f;
-    border-radius: 50%;
-    animation: animationCircle 3s ease-in-out 3s forwards infinite, animationCircleElement03 3s linear 3s forwards infinite;
-    opacity: 0;
-    pointer-events: none;
-}
-
-@keyframes animationCircle {
+  
+@keyframes rotate1 {
     0% {
-        transform: scale3d(0, 0, 1);
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(-200deg);
+    }
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(-30deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(30deg);
+    }
+}
+
+@keyframes spin1 {
+    0% {
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
+
+@keyframes spin3 {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+@keyframes shrink {
+    100% {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+@keyframes blink {
+    100% {
         opacity: 1;
-    }
-    100% {
-        transform: scale3d(1, 1, 1);
-        opacity: 1;
-    }
-}
-
-@keyframes animationCircleElement01 {
-    0% {
-        border: 0.25vw solid #00fffc;
-    }
-    100% {
-        border: 0 solid #d4ff00;
-    }
-}
-
-@keyframes animationCircleElement02 {
-    0% {
-        border: 0.5vw solid #017e7c;
-    }
-    100% {
-        border: 0 solid #017e7c;
-    }
-}
-
-@keyframes animationCircleElement03 {
-    0% {
-        border: 1vw solid #00413f;
-    }
-    100% {
-        border: 0 solid #00413f;
     }
 }

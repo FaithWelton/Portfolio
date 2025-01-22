@@ -1,33 +1,7 @@
 "use server";
 
 import { config } from "../util/config";
-
-export type UserProfile = {
-    username: string;
-    avatar_url: string;
-    html_url: string;
-    name: string;
-    location: string;
-    email: string;
-    bio: string[];
-};
-  
-export type UserRepo = {
-    id: number;
-    name: string;
-    private: boolean;
-    html_url: string;
-    description: string;
-    language: string;
-    languages_url: string;
-    created_at: string;
-    updated_at: string;
-    pushed_at: string;
-    has_wiki: boolean;
-    archived: boolean;
-    license: string | null;
-    visibility: string;
-};
+import { UserProfile, UserRepo } from "../util/types";
 
 const username = config.defaultUser.username;
 export async function GetProfile(): Promise<UserProfile> {
@@ -50,6 +24,7 @@ export async function GetProfile(): Promise<UserProfile> {
 };
 
 const GetLanguage = async (url: string): Promise<string> => {
+    if (!url || url === "") return "";
     let response: Response;
 
     try {
@@ -89,6 +64,8 @@ export async function GetRepos(): Promise<string[]> {
 };
 
 export async function GetProject(projectname: string): Promise<UserRepo | null> {
+    if (!projectname || projectname === "") return null;
+
     let response: Response;
     try {
         response = await fetch(`https://api.github.com/repos/${ username }/${ projectname }`);

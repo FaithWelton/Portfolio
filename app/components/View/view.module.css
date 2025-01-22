@@ -1,18 +1,30 @@
-.containerBorder {
+.view {
     height: 100%;
-    width: 100%;
-    clip-path: polygon(0 0, 35% 0, 40% 5%, 60% 5%, 65% 0, 100% 0, 100% 35%, 98% 40%, 98% 60%, 100% 65%, 100% 100%, 65% 100%, 60% 95%, 40% 95%, 35% 100%, 0 100%, 0 65%, 2% 60%, 2% 40%, 0 35%);
-    background: #00fffb7b;
+    width: 85%;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+
+    border-right: 1px solid #00FFFC;
+    border-top: 1px solid #00FFFC;
+    border-bottom: 1px solid #00FFFC;
+    background: #00fffb18;
+
+    clip-path: polygon(2% 8%, 0 0, 100% 0, 100% 100%, 0 100%, 2% 90%, 2% 75%, 8% 60%, 8% 40%, 2% 25%);
+
+    -webkit-animation: openScreen .5s ease-in both;
+    animation: openScreen .5s ease-in both;
 }
 
-.container {
-    height: 99%;
-    width: 99%;
-    clip-path: inherit;
-    border: 1px solid #00fffc;
-    border-radius: inherit;
-};
+@keyframes openScreen {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}

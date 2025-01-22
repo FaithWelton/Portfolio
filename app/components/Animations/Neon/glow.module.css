@@ -1,0 +1,61 @@
+.glow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  font-size: 2em;
+  font-family: "dystopian";
+  letter-spacing: 10px;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+  
+.blue {
+    animation: neonblue 1.5s ease-in-out infinite alternate;
+}
+  
+.yellow {
+    animation: neonyellow 1.5s ease-in-out infinite alternate;
+}
+
+.pink {
+    animation: neonpink 1.5s ease-in-out infinite alternate;
+}
+  
+/*glow*/
+@keyframes neonblue {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00fffc,
+        0 0 70px #00fffc, 0 0 80px #00fffc, 0 0 100px #00fffc, 0 0 150px #00fffc;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00fffc,
+        0 0 35px #00fffc, 0 0 40px #00fffc, 0 0 50px #00fffc, 0 0 75px #00fffc;
+    }
+}
+  
+@keyframes neonyellow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #d4ff00,
+        0 0 70px #d4ff00, 0 0 80px #d4ff00, 0 0 100px #d4ff00, 0 0 150px #d4ff00;
+    }
+
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #d4ff00,
+        0 0 35px #d4ff00, 0 0 40px #d4ff00, 0 0 50px #d4ff00, 0 0 75px #d4ff00;
+    }
+}
+
+@keyframes neonpink {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ae,
+        0 0 70px #ff00ae, 0 0 80px #ff00ae, 0 0 100px #ff00ae, 0 0 150px #ff00ae;
+    }
+
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ae,
+        0 0 35px #ff00ae, 0 0 40px #ff00ae, 0 0 50px #ff00ae, 0 0 75px #ff00ae;
+    }
+}

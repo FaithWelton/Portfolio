@@ -1,13 +1,17 @@
-import pageStyles from "../../page.module.css";
+import { usePathname } from "next/navigation";
 import styles from "./menu.module.css";
 
-export interface MenuItemProps {
+interface Props {
     label: string;
-    onClick: any;
+    route: string;
 };
 
-const MenuItem = ({ label, onClick }: MenuItemProps) => <li className={ `${ pageStyles.spacedText } ${ styles.menuItem }` } onClick={ onClick }>
-    <a> { label } </a>
-</li>
+const MenuItem = ({ label, route }: Props) => {
+    const pathname = usePathname();
+
+    return <li key={ label } className={ `${ styles.outerItem } ${ pathname === route ? styles.active : '' }` }>
+        <a href={ route } className={ `${ styles.innerItem } ${ pathname === route ? styles.activeChild : '' }` }> { label } </a>
+    </li>
+};
 
 export default MenuItem;

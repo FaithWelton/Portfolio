@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
                 search: "?v=4",
             }
         ]
-    }
+    },
 };
 
 export default nextConfig;
