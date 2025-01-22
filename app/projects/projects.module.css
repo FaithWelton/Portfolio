@@ -59,5 +59,6 @@
 }
 
 .listItem:hover {
-    color: #d4ff00;
+    border: 4px double #ff00ae;
+    color: #ff00ae;
 }
