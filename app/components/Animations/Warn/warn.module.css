@@ -25,16 +25,16 @@
     padding-left: 8px;
 
     clip-path: polygon(100% 100%, 0% 100%, 50% 0%);
-    background: #d4ff00;
-    border: 1px dashed #d4ff00;
+    background: var(--yellow);
+    border: 1px dashed var(--yellow);
 }
 
 .warningContainer {
     position: absolute;
     left: 110px;
 
-    border: 1px solid #00FFFC;
-    background: #00FFFC;
+    border: 1px solid var(--neon-blue);
+    background: var(--neon-blue);
 
     min-width: fit-content;
     max-width: 100%;
@@ -44,8 +44,8 @@
 
 .warningInner {
     padding: 5px;
-    background: #d4ff00;
-    color: #000000;
+    background: var(--yellow);
+    color: var(--dark);
 
     width: inherit;
 
@@ -59,14 +59,6 @@
     display: flex;
     flex-direction: row;
     width: fit-content;
-
-    /* border: 1px solid #d4ff00;
-    background: #d4ff002f;
-    position: absolute;
-    left: 110px;
-    width: fit-content;
-    max-width: 100%;
-    padding: 10px; */
 }
 
 /* Exclaim SVG */
@@ -81,7 +73,7 @@
     bottom: 5px;
     height: 10px;
     width: 10px;
-    background: #d4ff00;
+    background: var(--yellow);
     clip-path: polygon(100% 0, 0 0, 50% 100%);
 }
 
@@ -90,7 +82,7 @@
     top: 10px;
     height: 10px;
     width: 10px;
-    background: #d4ff00;
+    background: var(--yellow);
     clip-path: polygon(0 100%, 50% 0, 100% 100%, 75% 75%, 50% 60%, 25% 75%);
 }
 
@@ -100,7 +92,7 @@
     right: 10px;
     height: 10px;
     width: 10px;
-    background: #d4ff00;
+    background: var(--yellow);
     clip-path: polygon(0 100%, 50% 0, 100% 100%, 75% 75%, 50% 60%, 25% 75%);
     transform: rotate(120deg);
 }
@@ -111,7 +103,7 @@
     left: 10px;
     height: 10px;
     width: 10px;
-    background: #d4ff00;
+    background: var(--yellow);
     clip-path: polygon(0 100%, 50% 0, 100% 100%, 75% 75%, 50% 60%, 25% 75%);
     transform: rotate(240deg);
 }

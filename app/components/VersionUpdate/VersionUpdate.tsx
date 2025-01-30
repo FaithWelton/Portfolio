@@ -9,7 +9,7 @@ import { format } from "date-fns";
 const VersionUpdate = () => {
   const [portfolio, setPortfolio] = useState<UserRepo | null>(null);
   const [dateModified, setDateModified] = useState<Date>(new Date());
-  const style = { fontSize: "5px", letterSpacing: "3px", };
+  const style = { fontSize: "5px", letterSpacing: "3px" };
 
   useEffect(() => {
     const GetData = async () => {
@@ -27,15 +27,15 @@ const VersionUpdate = () => {
     
   return <div className={ styles.container }>
     <Glitchy>
-      <Typing text={ `Last Update: ${ format(dateModified, "EEEEE MMMMM dd yyyy") }` } elementId={ "last_update" } style={ style } />
+      <Typing text={ `Last Update: ${ format(dateModified, "EEEEE MMMMM dd yyyy") }` } light elementId={ "last_update" } style={ style } />
     </Glitchy>
 
     <Glitchy>
-      <Typing text={ `${ format(new Date(), "EEEEE MMMMM dd yyyy") }` } elementId={ "today" } style={ style } />
+      <Typing text={ `${ format(new Date(), "EEEEE MMMMM dd yyyy") }` } light elementId={ "today" } style={ style } />
     </Glitchy>
 
     <Glitchy>
-      <Typing text={ `V.1.0.` } elementId={ "version" } style={ style } />
+      <Typing text={ `V.1.0.` } elementId={ "version" } light style={ style } />
     </Glitchy>
   </div>
 };

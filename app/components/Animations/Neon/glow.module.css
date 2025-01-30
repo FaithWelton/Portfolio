@@ -8,12 +8,14 @@
   font-family: "dystopian";
   letter-spacing: 10px;
   text-transform: uppercase;
-
-  color: #FFFFFF;
 }
   
+.green {
+    animation: neongreen 1.5s ease-in-out infinite alternate;
+}
+
 .blue {
-    animation: neonblue 1.5s ease-in-out infinite alternate;
+  animation: neonblue 1.5s ease-in-out infinite alternate;
 }
   
 .yellow {
@@ -25,37 +27,48 @@
 }
   
 /*glow*/
-@keyframes neonblue {
+@keyframes neongreen {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00fffc,
-        0 0 70px #00fffc, 0 0 80px #00fffc, 0 0 100px #00fffc, 0 0 150px #00fffc;
+      text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF, 0 0 40px var(--neon-green),
+        0 0 70px var(--neon-green), 0 0 80px var(--neon-green), 0 0 100px var(--neon-green), 0 0 150px var(--neon-green);
     }
     to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00fffc,
-        0 0 35px #00fffc, 0 0 40px #00fffc, 0 0 50px #00fffc, 0 0 75px #00fffc;
+      text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px var(--neon-green),
+        0 0 35px var(--neon-green), 0 0 40px var(--neon-green), 0 0 50px var(--neon-green), 0 0 75px var(--neon-green);
     }
+}
+
+@keyframes neonblue {
+  from {
+    text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF, 0 0 40px var(--neon-blue),
+      0 0 70px var(--neon-blue), 0 0 80px var(--neon-blue), 0 0 100px var(--neon-blue), 0 0 150px var(--neon-blue);
+  }
+  to {
+    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px var(--neon-blue),
+      0 0 35px var(--neon-blue), 0 0 40px var(--neon-blue), 0 0 50px var(--neon-blue), 0 0 75px var(--neon-blue);
+  }
 }
   
 @keyframes neonyellow {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #d4ff00,
-        0 0 70px #d4ff00, 0 0 80px #d4ff00, 0 0 100px #d4ff00, 0 0 150px #d4ff00;
+      text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF, 0 0 40px var(--yellow),
+        0 0 70px var(--yellow), 0 0 80px var(--yellow), 0 0 100px var(--yellow), 0 0 150px var(--yellow);
     }
 
     to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #d4ff00,
-        0 0 35px #d4ff00, 0 0 40px #d4ff00, 0 0 50px #d4ff00, 0 0 75px #d4ff00;
+      text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px var(--yellow),
+        0 0 35px var(--yellow), 0 0 40px var(--yellow), 0 0 50px var(--yellow), 0 0 75px var(--yellow);
     }
 }
 
 @keyframes neonpink {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ae,
-        0 0 70px #ff00ae, 0 0 80px #ff00ae, 0 0 100px #ff00ae, 0 0 150px #ff00ae;
+      text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF, 0 0 40px var(--magenta),
+        0 0 70px var(--magenta), 0 0 80px var(--magenta), 0 0 100px var(--magenta), 0 0 150px var(--magenta);
     }
 
     to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ae,
-        0 0 35px #ff00ae, 0 0 40px #ff00ae, 0 0 50px #ff00ae, 0 0 75px #ff00ae;
+      text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px var(--magenta),
+        0 0 35px var(--magenta), 0 0 40px var(--magenta), 0 0 50px var(--magenta), 0 0 75px var(--magenta);
     }
 }

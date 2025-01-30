@@ -80,6 +80,8 @@ const GridBackground = () => {
                     style={{ left: line.x, top: line.y, height: line.height, animationDuration: `${ line.speed }s` }}
                 />
             )}
+
+            <div style={{ border: "1px solid red", height: "100%", width: "100%" }}> hello </div>
         </div>
     </div>
 };

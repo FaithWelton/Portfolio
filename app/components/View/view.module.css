@@ -5,9 +5,9 @@
     display: flex;
     justify-content: flex-end;
 
-    border-right: 1px solid #00FFFC;
-    border-top: 1px solid #00FFFC;
-    border-bottom: 1px solid #00FFFC;
+    border-right: 1px solid var(--neon-blue);
+    border-top: 1px solid var(--neon-blue);
+    border-bottom: 1px solid var(--neon-blue);
     background: #00fffb18;
 
     clip-path: polygon(2% 8%, 0 0, 100% 0, 100% 100%, 0 100%, 2% 90%, 2% 75%, 8% 60%, 8% 40%, 2% 25%);

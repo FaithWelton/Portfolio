@@ -13,17 +13,16 @@
     padding: 5px;
     display: flex;
     flex-direction: column;
-    color: #00fffc;
+    color: var(--neon-blue);
 }
 
 .link:hover {
-    color: #ff00ae;
+    color: var(--magenta);
 }
 
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltipText {
@@ -35,8 +34,8 @@
 .tooltipText {
     visibility: hidden;
     position: absolute;
-    border: 1px solid #00FFFC;
-    background: #00FFFC;
+    border: 1px solid var(--neon-blue);
+    background: var(--neon-blue);
     clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
 }
 
@@ -46,8 +45,8 @@
     padding: 5px;
 
     inset: 1px;
-    background: #f6ff00;
-    color: #000000;
+    background: var(--yellow);
+    color: var(--dark);
     clip-path: inherit;
 }
 

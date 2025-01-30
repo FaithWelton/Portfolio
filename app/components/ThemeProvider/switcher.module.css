@@ -1,0 +1,21 @@
+
+.selector {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    border: 1px solid hsl(var(--secondary));
+    border-radius: var(--radius);
+
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+
+    transition: all 0.2s ease;
+}
+
+.selector:hover {
+    border: 1px solid hsl(var(--primary));
+    border-radius: var(--radius);
+
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+}

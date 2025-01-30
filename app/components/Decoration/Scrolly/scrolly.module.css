@@ -7,7 +7,7 @@
     padding-right: 30px;
     font-size: 5px;
     text-transform: uppercase;
-    border-bottom: 1px dashed #00FFFB1E;
+    border-bottom: 1px dashed var(--neon-blue-dark);
 }
 
 .text {
