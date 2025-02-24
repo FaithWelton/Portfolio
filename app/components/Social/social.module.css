@@ -13,11 +13,11 @@
     padding: 5px;
     display: flex;
     flex-direction: column;
-    color: var(--neon-blue);
+    color: var(--secondary);
 }
 
 .link:hover {
-    color: var(--magenta);
+    color: var(--primary);
 }
 
 .tooltip {
@@ -34,8 +34,8 @@
 .tooltipText {
     visibility: hidden;
     position: absolute;
-    border: 1px solid var(--neon-blue);
-    background: var(--neon-blue);
+    border: 1px solid var(--secondary);
+    background: var(--secondary);
     clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
 }
 
@@ -45,8 +45,8 @@
     padding: 5px;
 
     inset: 1px;
-    background: var(--yellow);
-    color: var(--dark);
+    background: var(--tertiary);
+    color: var(--tertiary-foreground);
     clip-path: inherit;
 }
 

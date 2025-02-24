@@ -1,15 +1,35 @@
 "use client";
-import { menuItems } from "@/app/util/config";
-import AnimCircles from "../Animations/Circles/Circles";
+
+import { useState } from "react";
 import styles from "./menu.module.css";
-import MenuItem from "./MenuItem";
 
-const Menu = () => <div className={ styles.menu }>
-    <AnimCircles />
+export interface MenuItem {
+  label: string;
+  onClick: () => void;
+  style?: {};
+};
 
-    <ul className={ styles.list }>
-        { menuItems.map((item, index) => <MenuItem key={ index } label={ item.label } route={ item.route } /> )}
-    </ul>
-</div>
+interface MenuProps {
+  items: MenuItem[];
+  className?: string;
+};
+
+const Menu = ({ items }: MenuProps) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  return <div className={ styles.container }>
+    <div className={`${ styles.menu } ${ isOpen ? styles.open : "" }`}>
+      { items.map((item, index) =>
+        <div key={ index } className={ styles.menuItem } onClick={() => item.onClick() }>
+          { item.label }
+        </div>
+      )}
+    </div>
+
+    <button className={ styles.toggle } onClick={() => setIsOpen(!isOpen)}>
+      { "Menu" }
+    </button>
+  </div>
+};
 
 export default Menu;

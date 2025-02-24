@@ -1,0 +1,25 @@
+.button {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+  
+.primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+}
+  
+.primary:hover {
+    background-color: var(--primary) / 0.9;
+}
+  
+.secondary {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+}
+  
+.secondary:hover {
+    background-color: var(--secondary) / 0.9;
+}

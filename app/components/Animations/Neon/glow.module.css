@@ -5,7 +5,7 @@
   align-items: center;
 
   font-size: 2em;
-  font-family: "dystopian";
+  font-family: var(--title-font);
   letter-spacing: 10px;
   text-transform: uppercase;
 }

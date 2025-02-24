@@ -3,20 +3,14 @@
   --foreground: #ededed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html, body {
   height: 100%;
   width: 100%;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
@@ -29,109 +23,140 @@ body {
   margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-
 :root[class~="light"] {
-  --background: #a3a3a3;
-  --foreground: #2b2b2b;
-  
-  --card: 0 100% 100%;
-  --card-foreground: 0 100% 0%;
-  
-  /* --popover: 235 85% 10%;
-  --popover-foreground: 180 100% 60%; */
-  
-  --primary: 0 0% 50%;
-  --primary-foreground: 0 0% 100%;
-  
-  --secondary: 0 0% 70%;
-  --secondary-foreground: 0 0% 0%;
-  
-  --muted: 120 100% 50%;
-  --muted-foreground: 0 0% 0%;
-  
-  --accent: 120 100% 50%;
-  --accent-foreground: 120 100% 50%;
-  
-  --destructive: 0 100% 50%;
-  --destructive-foreground: 0 100% 50%;
+  --background: #F5F5F5;
+  --foreground: #0F172A;
 
-  --border: 0 0% 70%;
-  /* --input: 326 100% 50%; */
-  /* --ring: 326 100% 50%; */
+  --card: #ededed;
+  --card-foreground: #1E293B; /* ? */
+  
+  --primary: #38A169;
+  --primary-foreground: #F8F8F8;
+
+  --secondary: #B0B0B0;
+  --secondary-foreground: #334155;
+
+  --muted: #f1f5f9;
+  --muted-foreground: #AAAAAA;
+
+  --accent: #f8fafc; /* ? */
+  --accent-foreground: #F8F8F8;
+  
+  --destructive: #ff0000;
+  --destructive-foreground: #F5F5F5;
+
+  --border: #4CAF50;
   
   --radius: 0.5rem;
 
-  font-family: "Arial", sans-serif;
+  --link-visited: #6B5B95;
+
+  font-family: roboto;
+  --title-font: charm;
+  font-size: 1em;
 }
 
 :root[class~="dark"] {
-  --background: #2b2b2b;
-  --foreground: #a3a3a3;
+  --background: #0f172a;
+  --foreground: #f8fafc;
 
-  --card: 10 85% 0%;
-  --card-foreground: 180 100% 60%;
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
   
-  /* --popover: 235 85% 10%;
-  --popover-foreground: 180 100% 60%; */
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
 
-  --primary: 10 0% 80%;
-  --primary-foreground: 10 40% 10%;
+  --secondary: #334155;
+  --secondary-foreground: #f8fafc;
 
-  --secondary: 10 0% 50%;
-  --secondary-foreground: 10 40% 100%;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
 
-  --muted: 10 0% 10%;
-  --muted-foreground: 10 0% 80%;
+  --accent: #1e293b;
+  --accent-foreground: #38bdf8;
 
-  /* --accent: 10 0% 50%;
-  --accent-foreground: 10 20% 98%; */
-
-  --destructive: 0 100% 50%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive: #ff0000;
+  --destructive-foreground: #f8fafc;
     
-  --border: 10 0% 100%;
-  /* --input: 326 100% 50%; */
-  /* --ring: 326 100% 50%; */
+  --border: #efefef;
   
   --radius: 0.5rem;
-  font-family: "Arial", sans-serif;
+
+  --link-visited: #BB86FC;
+
+  font-family: roboto;
+  --title-font: charm;
+  font-size: 1em;
 }
 
 :root[class~="cyberpunk"] {
-  --background: 235 85% 5%;
-  --foreground: 180 100% 60%;
-  
-  --card: 235 85% 10%;
-  --card-foreground: 180 100% 60%;
-  
-  /* --popover: 235 85% 10%;
-  --popover-foreground: 180 100% 60%; */
-  
-  --primary: 326 100% 50%;
-  --primary-foreground: 210 40% 98%;
-  
-  --secondary: 180 100% 60%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  
-  --muted: 235 85% 20%;
-  --muted-foreground: 180 100% 40%;
-  
-  --accent: 326 100% 50%;
-  --accent-foreground: 210 40% 98%;
-  
-  --destructive: 0 100% 50%;
-  --destructive-foreground: 210 40% 98%;
+  --cyan: #00FFB3;
+  --magenta: #FF007A;
+  --yellow: #FFEA00;
+  --danger: #FF3D00;
 
-  --border: 326 100% 50%;
-  /* --input: 326 100% 50%; */
-  /* --ring: 326 100% 50%; */
+  --background: #020418;
+
+  --foreground: var(--cyan);
+  --muted-foreground: #00ffb3c2;
+
+  --card: #04072f;
+    
+  --primary: var(--magenta);
+  --primary-foreground: var(--cyan);
+  --primary-muted: #ff007bbe;
   
+  --secondary: var(--cyan);
+  --secondary-foreground: var(--magenta);
+  --secondary-muted: #00ffb3c2;
+
+  --tertiary: var(--yellow);
+  --tertiary-foreground: #000000;
+      
+  --destructive: var(--danger);
+  --destructive-foreground: #f8fafc;
+
+  --border: var(--magenta);
+
   --radius: 0.5rem;
 
-  font-family: "Titillium Web", sans-serif;
+  --link-visited: #600042;
+
+  font-family: orbitron;
+  --title-font: dystopian;
+  font-size: 1em;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 2px; /* reduce padding on mobile */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root[class~="light"],
+  :root[class~="dark"],
+  :root[class~="cyberpunk"] {
+    --radius: 0.25rem;
+  }
+
+  /* :root[class~="light"] {
+    mobile adjustments for light theme
+  } */
+
+  /* :root[class~="dark"] {
+    mobile adjustments for light theme
+  } */
+
+  /* :root[class~="cyberpunk"] {
+    mobile adjustments for light theme
+  } */
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1px; /* reduce padding on smaller screens */
+    font-size: 12px;
+  }
 }

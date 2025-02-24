@@ -1,46 +1,46 @@
 "use client";
 
 import styles from "./template.module.css";
-import Menu from "./components/Menu/Menu";
-import View from "./components/View/View";
-import Warn from "./components/Animations/Warn/Warn";
-import Sidelines from "./components/Decoration/Sidelines/Sidelines";
-import Sidebar from "./components/Sidebar/Sidebar";
-import { Bouncy1, Bouncy2 } from "./components/Decoration/BouncyLines/Bouncy";
-import SocialLinks from "./components/Social/socialLinks";
-import GridBackground from "./components/Animations/GridBackground/gridbg";
+import Menu, { MenuItem } from "./components/Menu/Menu";
 import ThemeSwitcher from "./components/ThemeProvider/ThemeSwitcher";
+import { usePathname, useRouter } from "next/navigation";
+import Glitchy from "./components/Animations/Glitch/Glitchy";
+import Glow from "./components/Animations/Neon/Glow";
+import SocialLinks from "./components/Social/socialLinks";
 
 const Template = ({ children }: { children: React.ReactNode }) => {
-    return <div style={{ background: "hsl(var(--background))", color: "hsl(var(--foreground))", height: "100%", width: "100%" }}>
-        <header>
+    const router = useRouter();
+    const pathname = usePathname();
+    
+    const items: MenuItem[] = [
+        { label: "Home", onClick: () => router.push("/") },
+        { label: "About", onClick: () => router.push("/about") },
+        { label: "Projects", onClick: () => router.push("/projects") },
+    ];
+    
+    return <div style={{ background: "var(--background)", color: "var(--foreground)", height: "100%", width: "100%" }}>
+        <div>
             <nav className={ styles.container }>
                 <ThemeSwitcher />
             </nav>
-        </header>
+
+            <div id="page" className={ styles.page }>
+                <Glitchy> <Glow text={ pathname === "/" ? "/home" : pathname } color="pink" /> </Glitchy>
+            </div>
+
+            <div className={ styles.divider } />
+        </div>
+        
+        <Menu items={ items } />
         
         <main className={ styles.container }>
             { children }
+
+            <div className={ styles.divider } />
         </main>
-    </div>
-
-    // return <div className={ styles.template }>
-    //     <GridBackground />
-
-    //     <Sidelines />
-    //     <Bouncy1 /><Bouncy2 />
         
-    //     <Sidebar />
-
-    //     <Menu />
-
-    //     <View>
-    //         { children }
-    //     </View>
-
-    //     <SocialLinks />
-    //     <Warn />
-    // </div>
+        <SocialLinks />
+    </div>
 };
 
 export default Template;
