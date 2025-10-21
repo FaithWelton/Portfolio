@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "./ThemeContext";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: "Faith Welton | Portfolio",
@@ -21,6 +22,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <ThemeProvider>
           {children}
         </ThemeProvider>
+
+        <Analytics/>
       </body>
     </html>
   );
