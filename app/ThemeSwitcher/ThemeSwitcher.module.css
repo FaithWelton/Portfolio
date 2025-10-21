@@ -1,0 +1,127 @@
+.themeSwitcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+}
+
+.themeButton {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--terminal-border);
+  padding: 10px 15px;
+  color: var(--terminal-text);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-shadow: 0 0 5px var(--terminal-glow);
+  box-shadow: 0 0 10px var(--terminal-shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.themeButton:hover {
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 0 20px var(--terminal-glow);
+  transform: scale(1.05);
+}
+
+.themeIcon {
+  font-size: 16px;
+}
+
+.themeMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.95);
+  border: 2px solid var(--terminal-border);
+  border-radius: 4px;
+  padding: 10px;
+  min-width: 200px;
+  box-shadow: 0 0 20px var(--terminal-shadow);
+}
+
+.menuHeader {
+  color: var(--terminal-text);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px var(--terminal-glow);
+  border-bottom: 1px solid var(--terminal-border);
+  padding-bottom: 8px;
+}
+
+.themeOption {
+  background: transparent;
+  border: 1px solid var(--terminal-text-dim);
+  padding: 10px 15px;
+  color: var(--terminal-text);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.themeOption:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--terminal-border);
+  box-shadow: 0 0 10px var(--terminal-shadow);
+}
+
+.themeOption.active {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--terminal-border);
+  box-shadow: 0 0 15px var(--terminal-glow);
+  text-shadow: 0 0 5px var(--terminal-glow);
+}
+
+.themePreview {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.checkmark {
+  margin-left: auto;
+  font-size: 10px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .themeSwitcher {
+    top: 10px;
+    right: 10px;
+  }
+
+  .themeButton {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .themeIcon {
+    font-size: 14px;
+  }
+
+  .themeMenu {
+    min-width: 160px;
+  }
+
+  .themeOption {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+}

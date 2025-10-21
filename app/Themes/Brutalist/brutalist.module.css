@@ -1,0 +1,210 @@
+.container {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  font-family: 'Arial Black', sans-serif;
+  padding: 0;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar for Brutalist theme */
+.container::-webkit-scrollbar {
+  width: 16px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #000;
+  border-left: 4px solid #fff;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #ff0;
+  border: 4px solid #000;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: #0ff;
+}
+
+.header {
+  background: #fff;
+  color: #000;
+  padding: 20px 40px;
+  border-bottom: 10px solid #000;
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.content {
+  padding: 40px;
+}
+
+.box {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 5px solid #000;
+}
+
+.boxYellow {
+  background: #ff0;
+  color: #000;
+  transform: rotate(-1deg);
+}
+
+.boxMagenta {
+  background: #f0f;
+  color: #000;
+  transform: rotate(1deg);
+}
+
+.boxGreen {
+  background: #0f0;
+  color: #000;
+}
+
+.boxCyan {
+  background: #0ff;
+  color: #000;
+}
+
+.boxRed {
+  background: #f00;
+  color: #fff;
+  transform: rotate(-0.5deg);
+}
+
+.boxTitle {
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0 0 15px 0;
+}
+
+.smallBoxTitle {
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0 0 10px 0;
+}
+
+.boxText {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.smallBoxText {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.projectLink {
+  padding: 20px;
+  border: 4px solid #000;
+  text-decoration: none;
+  display: block;
+}
+
+.projectLinkEven {
+  background: #000;
+  color: #0f0;
+}
+
+.projectLinkOdd {
+  background: #fff;
+  color: #000;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.projectTitle {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.projectStars {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.projectDescription {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projectTag {
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 900;
+  border: 2px solid #000;
+}
+
+.projectTagEven {
+  background: #0f0;
+  color: #000;
+}
+
+.projectTagOdd {
+  background: #000;
+  color: #0f0;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.skillItem {
+  background: #000;
+  color: #0ff;
+  padding: 10px;
+  border: 3px solid #000;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.contactText {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.contactTextLast {
+  margin: 0;
+}
+
+.contactLink {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.loadingText {
+  font-size: 18px;
+  font-weight: 700;
+}

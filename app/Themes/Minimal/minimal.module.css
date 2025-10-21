@@ -1,0 +1,427 @@
+.container {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(30, 30, 35, 0.5) 0%, transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(20, 25, 30, 0.5) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0a0f 0%, #1a1a25 50%, #0f0f18 100%);
+  color: #b0b0c0;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 60px 30px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for Minimal theme */
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: rgba(20, 25, 35, 0.5);
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: rgba(107, 122, 153, 0.4);
+  border-radius: 5px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 122, 153, 0.6);
+}
+
+/* Subtle grid pattern */
+.container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(100, 100, 120, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 100, 120, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header section */
+.header {
+  background: linear-gradient(135deg, rgba(30, 30, 40, 0.6), rgba(20, 25, 35, 0.8));
+  border: 1px solid rgba(100, 100, 130, 0.2);
+  border-left: 4px solid #6b7a99;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(107, 122, 153, 0.1), transparent);
+  animation: scan 8s linear infinite;
+}
+
+@keyframes scan {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+.classified {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #6b7a99;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #e8e8f0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #8a8aa0;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Dossier sections */
+.dossier {
+  background: linear-gradient(135deg, rgba(25, 30, 40, 0.7), rgba(20, 25, 35, 0.9));
+  border: 1px solid rgba(100, 100, 130, 0.2);
+  border-left: 3px solid #6b7a99;
+  padding: 35px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  position: relative;
+}
+
+.dossier::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 8px;
+  height: 8px;
+  background: #6b7a99;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(107, 122, 153, 0.6);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(100, 100, 130, 0.2);
+}
+
+.sectionLabel {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #6b7a99;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #d0d0e0;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.bodyText {
+  color: #b0b0c0;
+  line-height: 1.9;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+
+/* Projects - Intel Reports */
+.intelGrid {
+  display: grid;
+  gap: 20px;
+}
+
+.intelReport {
+  background: linear-gradient(135deg, rgba(30, 35, 45, 0.6), rgba(25, 30, 40, 0.8));
+  border: 1px solid rgba(100, 100, 130, 0.15);
+  padding: 25px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.intelReport::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(107, 122, 153, 0.08), transparent);
+  transition: left 0.5s ease;
+}
+
+.intelReport:hover {
+  border-color: rgba(107, 122, 153, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  transform: translateX(5px);
+}
+
+.intelReport:hover::before {
+  left: 100%;
+}
+
+.reportHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.reportCode {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #6b7a99;
+  font-weight: 600;
+}
+
+.reportTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e0e0f0;
+  margin: 5px 0 0 0;
+  flex: 1;
+}
+
+.reportMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #8a8aa0;
+}
+
+.reportDescription {
+  color: #a0a0b5;
+  line-height: 1.7;
+  margin: 0 0 15px 0;
+  font-size: 14px;
+}
+
+.reportTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 5px 12px;
+  background: rgba(107, 122, 153, 0.15);
+  border: 1px solid rgba(107, 122, 153, 0.3);
+  color: #a0a0b5;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.intelReport:hover .tag {
+  background: rgba(107, 122, 153, 0.25);
+  border-color: rgba(107, 122, 153, 0.5);
+}
+
+/* Skills - Capabilities */
+.capabilitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.capabilityCategory {
+  background: linear-gradient(135deg, rgba(30, 35, 45, 0.5), rgba(25, 30, 40, 0.7));
+  border: 1px solid rgba(100, 100, 130, 0.15);
+  padding: 25px;
+  position: relative;
+}
+
+.categoryTitle {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #6b7a99;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.categoryIcon {
+  width: 6px;
+  height: 6px;
+  background: #6b7a99;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(107, 122, 153, 0.6);
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skillItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #b0b0c0;
+}
+
+.skillName {
+  flex: 1;
+}
+
+.skillLevel {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.levelDot {
+  width: 4px;
+  height: 4px;
+  background: rgba(107, 122, 153, 0.3);
+  border-radius: 50%;
+}
+
+.levelDot.active {
+  background: #6b7a99;
+  box-shadow: 0 0 8px rgba(107, 122, 153, 0.6);
+}
+
+/* Contact - Secure Channels */
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.contactChannel {
+  background: linear-gradient(135deg, rgba(30, 35, 45, 0.5), rgba(25, 30, 40, 0.7));
+  border: 1px solid rgba(100, 100, 130, 0.15);
+  padding: 25px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contactChannel:hover {
+  border-color: rgba(107, 122, 153, 0.4);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-3px);
+}
+
+.contactIcon {
+  font-size: 28px;
+  opacity: 0.7;
+}
+
+.contactInfo {
+  flex: 1;
+}
+
+.contactLabel {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #6b7a99;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contactValue {
+  color: #d0d0e0;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.loadingText {
+  color: #8a8aa0;
+  font-style: italic;
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  .stamp {
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .header,
+  .dossier {
+    padding: 25px 20px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .capabilitiesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}

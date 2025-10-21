@@ -1,0 +1,163 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar for Blurple theme */
+.container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+  background-clip: padding-box;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 900px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.aboutText {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.projectLink {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.projectLink:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.projectTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.projectStars {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.projectDescription {
+  margin: 0 0 10px 0;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projectTag {
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skillBadge {
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactText {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contactLink {
+  color: white;
+  text-decoration: underline;
+}
+
+.loadingText {
+  color: rgba(255, 255, 255, 0.8);
+}
